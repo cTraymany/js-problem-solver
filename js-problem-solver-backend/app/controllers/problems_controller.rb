@@ -1,5 +1,5 @@
 class ProblemsController < ApplicationController
     def index
-        render json: Problem.all
+        render json: ProblemSerializer.new(Problem.all)
     end
 end

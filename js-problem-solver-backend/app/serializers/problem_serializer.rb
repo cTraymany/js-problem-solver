@@ -1,4 +1,4 @@
 class ProblemSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :title, :description, :solutions
 end
