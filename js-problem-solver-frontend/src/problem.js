@@ -25,3 +25,6 @@ fetch("http://localhost:3000/problems")
 //         ul.appendChild(li)
 //     }
 // }
+
+
+// add event listener to show solutions on problem click
