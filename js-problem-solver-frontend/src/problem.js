@@ -27,6 +27,10 @@ class Problem {
 
         container.innerHTML = ""
         
+        problemH3.innerHTML = this.title
+        problemP.innerHTML = this.description
+        answers.innerHTML = "Solutions"
+        
 
 
 
