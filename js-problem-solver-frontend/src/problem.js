@@ -31,6 +31,10 @@ class Problem {
         problemP.innerHTML = this.description
         answers.innerHTML = "Solutions"
         
+        container.appendChild(problemH3)
+        container.appendChild(problemP)
+        container.appendChild(answers)
+
 
 
 
