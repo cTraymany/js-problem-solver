@@ -5,16 +5,23 @@ class Problem {
         this.title = problem.attributes.title;
         this.description = problem.attributes.description
         this.id = problem.id
+        this.solutions = problem.attributes.solutions.map(solution => new Solution(solution))
         Problem.all.push(this)
     }
 
     renderProblem() {
         const div = document.getElementById("problemsContainer")
-        let p = document.createElement("p")
+        const p = document.createElement("p")
         p.innerText = this.title
+        p.id = this.id
         div.appendChild(p)
+        p.addEventListener("click", this.showSolutionOnClick)
     }
     
+    showSolutionOnClick() {
+
+    }
+
     static renderProblems() {
         for (const problem of this.all) {
             problem.renderProblem()
