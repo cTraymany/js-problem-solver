@@ -1,4 +1,4 @@
 class SolutionSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :content
+  attributes :content, :problem_id
 end
