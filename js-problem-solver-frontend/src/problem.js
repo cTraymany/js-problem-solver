@@ -35,7 +35,18 @@ class Problem {
         container.appendChild(problemP)
         container.appendChild(answers)
 
-
+        if (this.solutions.length) {
+            this.solutions.forEach(solution => {
+                const showSolution = document.createElement("li")
+                showSolution.id = solution.id
+                showSolution.innerHTML = solution.content
+                container.appendChild(showSolution)
+            })
+        } else {
+            const sorry = document.createElement("p")
+            sorry.innerHTML = "<em>No current solutions</em>"
+            container.appendChild(sorry)
+        }
 
 
     }
