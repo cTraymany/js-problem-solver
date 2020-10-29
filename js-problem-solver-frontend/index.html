@@ -12,18 +12,20 @@
 
 <body>
   <h1>Problem Solver</h1>
-  <div id="problemsContainer"></div>
-
-  <form action="index.html" method="POST" id="problemForm">
-    <label>Title</label><br>
-    <input type="text" id="problemTitle"><br><br>
-
-    <label>Description</label><br>
-    <input type="text" id=problemDescription><br><br>
-
-    <input type="submit">
-  </form>
-
+  
+  <div id="container">
+    <form action="index.html" method="POST" id="problemForm">
+      <label>Title</label><br>
+      <input type="text" id="problemTitle"><br><br>
+      
+      <label>Description</label><br>
+      <input type="text" id=problemDescription><br><br>
+      
+      <input type="submit">
+    </form>
+    
+    <div id="problemsContainer"></div>
+  </div>
   <script type="text/javascript" src="src/problem.js"></script>
   <script type="text/javascript" src="src/solution.js"></script>
   <script type="text/javascript" src="src/index.js"></script>
