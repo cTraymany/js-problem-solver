@@ -15,10 +15,20 @@ class Problem {
         p.innerText = this.title
         p.id = this.id
         div.appendChild(p)
-        p.addEventListener("click", this.showSolutionOnClick)
+        p.addEventListener("click", this.showSolutionOnClick.bind(this))
     }
     
     showSolutionOnClick() {
+        const container = document.getElementById("container")
+        const problemH3 = document.createElement("h3")
+        const problemP = document.createElement("p")
+        const ul = document.createElement("ul")
+        const answers = document.createElement("h3")
+
+        container.innerHTML = ""
+        
+
+
 
     }
 
