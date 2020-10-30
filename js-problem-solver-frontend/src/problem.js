@@ -71,16 +71,13 @@ class Problem {
 
     submitSolution() {
         event.preventDefault()
-        // debugger
         const content = document.getElementById("solutionContent").value
         const problemId = this.id
-        // const solution = {solution: {content: content, problem_id: problemId}}
 
         document.getElementById("solutionContent").value = ""
 
         // 
         // 
-
         const obj = {
             method: "POST",
             headers: {
@@ -94,11 +91,9 @@ class Problem {
           .then(resp => resp.json())
           .then(jsObj => {
             console.log(jsObj)
-            // let newProblem = new Problem(jsObj.data)
-            // newProblem.renderProblem()
+            // let newSolution = new Solution(jsObj.data)
+            // newSolution.renderSolution()
           })
-
-
         // 
         // 
     }
