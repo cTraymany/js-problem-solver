@@ -78,15 +78,12 @@ class Problem {
             },
             body: JSON.stringify({problem: {title: title, description: description}})
         }
-        //   debugger
         
         fetch("http://localhost:3000/problems", obj)
         .then(async (response) => {
             return await response.json()
-            // debugger
         })
         .then(jsObj => {
-            // debugger
             let newProblem = new Problem(jsObj.data)
             newProblem.renderProblem()
         })
