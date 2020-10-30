@@ -67,6 +67,15 @@ class Problem {
         container.appendChild(solutionForm)
         // end of createSolution
 
+        // create back button
+        const back = document.createElement("button")
+        back.innerHTML = "Back"
+        container.appendChild(back)
+        back.addEventListener("click", () => location.reload())
+
+        // 
+
+
         solutionForm.addEventListener("submit", this.submitSolution.bind(this))
     }
 
@@ -109,6 +118,7 @@ class Problem {
             problem.renderProblem()
         }
     }
+
     static fetchProblems() {
         fetch("http://localhost:3000/problems")
             .then(resp => resp.json())
