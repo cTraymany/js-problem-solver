@@ -60,6 +60,12 @@ class Problem {
         input.setAttribute("id", "solutionContent")
         submit.setAttribute("type", "submit")
 
+        solutionForm.appendChild(label)
+        solutionForm.appendChild(input)
+        solutionForm.appendChild(submit)
+        container.appendChild(solutionForm)
+        // end of createSolution
+
 
     }
 
