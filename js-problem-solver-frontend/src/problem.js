@@ -50,6 +50,12 @@ class Problem {
         }
 
         // Solution.createSolution()
+        const solutionForm = document.createElement("form")
+        const label = document.createElement("label")
+        const input = document.createElement("input")
+        const submit = document.createElement("input")
+
+        
     }
 
     static renderProblems() {
