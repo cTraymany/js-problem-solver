@@ -11,25 +11,18 @@ class Solution {
         const input = document.createElement("input")
         const submit = document.createElement("input")
         const ul = document.getElementById("solutionsUl")
-        const back = document.createElement("button")
-        back.innerHTML = "Back"
-        back.setAttribute("id", "cancel")
-        back.setAttribute("class", "btn-primary")
 
         solutionForm.setAttribute("id", "solutionForm")
-        label.innerHTML = "Give solution: "
+        label.innerHTML = "Give solution "
         input.setAttribute("type", "text")
         input.setAttribute("id", "solutionContent")
         submit.setAttribute("type", "submit")
         submit.setAttribute("class", "btn-primary")
 
+        container.appendChild(solutionForm)
         solutionForm.appendChild(label)
         solutionForm.appendChild(input)
         solutionForm.appendChild(submit, document.createElement("br"))
-        container.appendChild(solutionForm)
-        container.appendChild(back)
-
-        back.addEventListener("click", () => location.reload())
 
     }
 
@@ -61,8 +54,6 @@ class Solution {
             showSolution.id = newSolution.id
             showSolution.innerHTML = newSolution.content
             document.getElementById("solutionsUl").appendChild(showSolution)
-
           })
     }
-
 }
