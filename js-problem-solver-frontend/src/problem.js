@@ -55,7 +55,12 @@ class Problem {
         const input = document.createElement("input")
         const submit = document.createElement("input")
 
-        
+        label.innerHTML = "Give solution: "
+        input.setAttribute("type", "text")
+        input.setAttribute("id", "solutionContent")
+        submit.setAttribute("type", "submit")
+
+
     }
 
     static renderProblems() {
