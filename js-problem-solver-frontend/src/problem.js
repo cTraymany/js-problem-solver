@@ -37,84 +37,26 @@ class Problem {
         container.appendChild(answers)
         container.appendChild(ul)
 
-        if (this.solutions.length) {
-            this.solutions.forEach(solution => {
-                const showSolution = document.createElement("li")
-                showSolution.id = solution.id
-                showSolution.innerHTML = solution.content
-                ul.appendChild(showSolution)
-            })
-        } else {
-            const sorry = document.createElement("p")
-            sorry.innerHTML = "<em>No current solutions</em>"
-            container.appendChild(sorry)
-        }
+        // this.showSorryMessage
 
-        // Solution.createSolution()
-        const solutionForm = document.createElement("form")
-        const label = document.createElement("label")
-        const input = document.createElement("input")
-        const submit = document.createElement("input")
-        const back = document.createElement("button")
-
-        solutionForm.setAttribute("id", "solutionForm")
-        label.innerHTML = "Give solution: "
-        input.setAttribute("type", "text")
-        input.setAttribute("id", "solutionContent")
-        submit.setAttribute("type", "submit")
-        submit.setAttribute("class", "btn-primary")
-        back.innerHTML = "Back"
-        back.setAttribute("class", "btn-primary")
-
-        solutionForm.appendChild(label)
-        solutionForm.appendChild(input)
-        solutionForm.appendChild(submit, document.createElement("br"))
-        container.appendChild(solutionForm)
-        container.appendChild(back)
-        // end of createSolution
-
-        // create back button
-        back.addEventListener("click", () => location.reload())
-
-        // 
-
-
-        solutionForm.addEventListener("submit", this.submitSolution.bind(this))
+        Solution.createSolutionForm()
+        solutionForm.addEventListener("submit", Solution.submitSolution.bind(this))
     }
 
-    submitSolution() {
-        event.preventDefault()
-        const content = document.getElementById("solutionContent").value
-        const problemId = this.id
-
-        document.getElementById("solutionContent").value = ""
-
-        // 
-        // 
-        const obj = {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "Accept": "application/json"
-            },
-            body: JSON.stringify({solution: {content: content, problem_id: problemId}})
-          }
-    
-        fetch("http://localhost:3000/solutions", obj)
-          .then(resp => resp.json())
-          .then(jsObj => {
-            // console.log(jsObj)
-            const newSolution = new Solution(jsObj.data)
-            const foundProb = Problem.all.find(prob => parseInt(prob.id) === newSolution.problemId)
-            
-            foundProb.solutions.push(newSolution)
-
-            const showSolution = document.createElement("li")
-            showSolution.id = newSolution.id
-            showSolution.innerHTML = newSolution.content
-            document.getElementById("solutionsUl").appendChild(showSolution)
-          })
-    }
+    // showSorryMessage() {
+    //     if (this.solutions.length) {
+    //         this.solutions.forEach(solution => {
+    //             const showSolution = document.createElement("li")
+    //             showSolution.id = solution.id
+    //             showSolution.innerHTML = solution.content
+    //             ul.appendChild(showSolution)
+    //         })
+    //     } else {
+    //         const sorry = document.createElement("p")
+    //         sorry.innerHTML = "<em>No current solutions</em>"
+    //         container.appendChild(sorry)
+    //     }
+    // }
 
     static renderProblems() {
         for (const problem of this.all) {
@@ -127,8 +69,7 @@ class Problem {
             .then(resp => resp.json())
             .then(probs => {
                 for (const prob of probs.data) {
-                    let newProblem = new Problem(prob)
-                    // console.log(newProblem)
+                    new Problem(prob)
                 }
                 this.renderProblems()
             })
@@ -136,11 +77,16 @@ class Problem {
 
     static createProblem() {
         event.preventDefault()
-        const title = document.getElementById("problemTitle").value
-        const description = document.getElementById("problemDescription").value
         document.getElementById("problemTitle").value = ""
         document.getElementById("problemDescription").value = ""
-    
+        
+        Problem.postProblem()
+    }
+
+    static postProblem() {
+        const title = document.getElementById("problemTitle").value
+        const description = document.getElementById("problemDescription").value
+
         const obj = {
             method: "POST",
             headers: {
