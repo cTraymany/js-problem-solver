@@ -55,22 +55,25 @@ class Problem {
         const label = document.createElement("label")
         const input = document.createElement("input")
         const submit = document.createElement("input")
+        const back = document.createElement("button")
 
+        solutionForm.setAttribute("id", "solutionForm")
         label.innerHTML = "Give solution: "
         input.setAttribute("type", "text")
         input.setAttribute("id", "solutionContent")
         submit.setAttribute("type", "submit")
+        submit.setAttribute("class", "btn-primary")
+        back.innerHTML = "Back"
+        back.setAttribute("class", "btn-primary")
 
         solutionForm.appendChild(label)
         solutionForm.appendChild(input)
-        solutionForm.appendChild(submit)
+        solutionForm.appendChild(submit, document.createElement("br"))
         container.appendChild(solutionForm)
+        container.appendChild(back)
         // end of createSolution
 
         // create back button
-        const back = document.createElement("button")
-        back.innerHTML = "Back"
-        container.appendChild(back)
         back.addEventListener("click", () => location.reload())
 
         // 
