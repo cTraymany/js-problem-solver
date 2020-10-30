@@ -44,37 +44,15 @@ class Problem {
         container.appendChild(ul)
         container.appendChild(back)
 
-        // if (this.solutions.length) {
-            this.solutions.forEach(solution => {
-                const showSolution = document.createElement("li")
-                showSolution.id = solution.id
-                showSolution.innerHTML = solution.content
-                ul.appendChild(showSolution)
-            })
-        // } else {
-        //     const sorry = document.createElement("p")
-        //     sorry.innerHTML = "<em>No current solutions</em>"
-        //     container.appendChild(sorry)
-        // }
-        // this.showSorryMessage
+        this.solutions.forEach(solution => {
+            const showSolution = document.createElement("li")
+            showSolution.id = solution.id
+            showSolution.innerHTML = solution.content
+            ul.appendChild(showSolution)
+        })
 
         solutionForm.addEventListener("submit", Solution.submitSolution.bind(this))
     }
-
-    // showSorryMessage() {
-    //     if (this.solutions.length) {
-    //         this.solutions.forEach(solution => {
-    //             const showSolution = document.createElement("li")
-    //             showSolution.id = solution.id
-    //             showSolution.innerHTML = solution.content
-    //             ul.appendChild(showSolution)
-    //         })
-    //     } else {
-    //         const sorry = document.createElement("p")
-    //         sorry.innerHTML = "<em>No current solutions</em>"
-    //         container.appendChild(sorry)
-    //     }
-    // }
 
     static renderProblems() {
         for (const problem of this.all) {
@@ -115,8 +93,12 @@ class Problem {
           }
     
         fetch("http://localhost:3000/problems", obj)
-          .then(resp => resp.json())
+          .then(resp => {
+              resp.json()
+              debugger
+            })
           .then(jsObj => {
+            //   debugger
             let newProblem = new Problem(jsObj.data)
             newProblem.renderProblem()
           })
