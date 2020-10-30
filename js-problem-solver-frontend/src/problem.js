@@ -76,7 +76,25 @@ class Problem {
         const problemId = this.id
         // const solution = {solution: {content: content, problem_id: problemId}}
 
+        document.getElementById("solutionContent").value = ""
 
+        // 
+        // 
+
+        const obj = {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            },
+            body: JSON.stringify({solution: {content: content, problem_id: problemId}})
+          }
+    
+
+
+
+        // 
+        // 
     }
 
     static renderProblems() {
