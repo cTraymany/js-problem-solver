@@ -9,15 +9,6 @@ class Problem {
         Problem.all.push(this)
     }
 
-    renderProblem() {
-        const div = document.getElementById("problemsContainer")
-        const p = document.createElement("p")
-        p.innerText = this.title
-        p.id = this.id
-        div.appendChild(p)
-        p.addEventListener("click", this.showSolutionsOnClick.bind(this))
-    }
-    
     showSolutionsOnClick() {
         const container = document.getElementById("container")
         const problemH3 = document.createElement("h3")
@@ -43,23 +34,23 @@ class Problem {
         container.appendChild(answers)
         container.appendChild(ul)
         container.appendChild(back)
-
+        
         this.solutions.forEach(solution => {
             const showSolution = document.createElement("li")
             showSolution.id = solution.id
             showSolution.innerHTML = solution.content
             ul.appendChild(showSolution)
         })
-
+        
         solutionForm.addEventListener("submit", Solution.submitSolution.bind(this))
     }
-
+    
     static renderProblems() {
         for (const problem of this.all) {
             problem.renderProblem()
         }
     }
-
+    
     static fetchProblems() {
         fetch("http://localhost:3000/problems")
             .then(resp => resp.json())
@@ -69,38 +60,44 @@ class Problem {
                 }
                 this.renderProblems()
             })
-    }
-
+        }
+        
     static createProblem() {
         event.preventDefault()
+        
+        const title = document.getElementById("problemTitle").value
+        const description = document.getElementById("problemDescription").value
         document.getElementById("problemTitle").value = ""
         document.getElementById("problemDescription").value = ""
         
-        Problem.postProblem()
-    }
-
-    static postProblem() {
-        const title = document.getElementById("problemTitle").value
-        const description = document.getElementById("problemDescription").value
-
         const obj = {
             method: "POST",
             headers: {
-              "Content-Type": "application/json",
-              "Accept": "application/json"
+                "Content-Type": "application/json",
+                "Accept": "application/json"
             },
             body: JSON.stringify({problem: {title: title, description: description}})
-          }
-    
+        }
+        //   debugger
+        
         fetch("http://localhost:3000/problems", obj)
-          .then(resp => {
-              resp.json()
-              debugger
-            })
-          .then(jsObj => {
-            //   debugger
+        .then(async (response) => {
+            return await response.json()
+            // debugger
+        })
+        .then(jsObj => {
+            // debugger
             let newProblem = new Problem(jsObj.data)
             newProblem.renderProblem()
-          })
+        })
+    }
+    
+    renderProblem() {
+        const div = document.getElementById("problemsContainer")
+        const p = document.createElement("p")
+        p.innerText = this.title
+        p.id = this.id
+        div.appendChild(p)
+        p.addEventListener("click", this.showSolutionsOnClick.bind(this))
     }
 }
