@@ -1,31 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <title>JS Problem Solver</title>
 
-  <link rel="stylesheet" href="">
+  <!-- <link rel="stylesheet" href=""> -->
 
 </head>
 
 <body>
-  <h1>Problem Solver</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="jumbotron">Problem Solver</h1>
+    </div>
+  </div>
   
   <div id="container">
+    <form action="index.html" method="POST" id="problemForm">
+      <label>Title</label>
+      <input type="text" id="problemTitle">
+      
+      <label>Description</label>
+      <input type="text" id=problemDescription>
+      
+      <input type="submit" class="btn-primary">
+    </form>
+
     <div id="problemsContainer">
       <h3>Problems</h3>
     </div>
-    <form action="index.html" method="POST" id="problemForm">
-      <label>Title</label><br>
-      <input type="text" id="problemTitle"><br><br>
-      
-      <label>Description</label><br>
-      <input type="text" id=problemDescription><br><br>
-      
-      <input type="submit">
-    </form>
   </div>
   <script type="text/javascript" src="src/problem.js"></script>
   <script type="text/javascript" src="src/solution.js"></script>
