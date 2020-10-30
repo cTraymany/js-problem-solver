@@ -32,23 +32,6 @@ class Solution {
     //     const content = document.getElementById("solutionContent").value
     //     document.getElementById("solutionContent").value = ""
     
-    //     const obj = {
-    //         method: "POST",
-    //         headers: {
-    //           "Content-Type": "application/json",
-    //           "Accept": "application/json"
-    //         },
-    //         body: JSON.stringify({solution: {content: content}})
-    //       }
-    
-    //     fetch("http://localhost:3000/problems", obj)
-    //       .then(resp => resp.json())
-    //       .then(jsObj => {
-    //           debugger
-    //         let newSolution = new Solution(jsObj.data)
-    //         // newProblem.renderProblem()
-    //       })
-    //     // 
-    //     // 
+
     // }
 }
