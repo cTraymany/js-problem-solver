@@ -10,7 +10,6 @@ class Solution {
         const label = document.createElement("label")
         const input = document.createElement("input")
         const submit = document.createElement("input")
-        const ul = document.getElementById("solutionsUl")
 
         solutionForm.setAttribute("id", "solutionForm")
         label.innerHTML = "Give solution "
