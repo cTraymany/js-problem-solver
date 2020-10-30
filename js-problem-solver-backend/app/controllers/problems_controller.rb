@@ -5,7 +5,7 @@ class ProblemsController < ApplicationController
 
     def create
         problem = Problem.create(problem_params)
-        if problem.save
+        if problem.valid?
             render json: ProblemSerializer.new(problem)
         # else
         #     flash: {message: "Please enter a title and description."}
