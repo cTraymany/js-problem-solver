@@ -30,6 +30,7 @@ class Problem {
         problemH3.innerHTML = this.title
         problemP.innerHTML = this.description
         answers.innerHTML = "Solutions"
+        ul.setAttribute("id", "solutionsUl")
         
         container.appendChild(problemH3)
         container.appendChild(problemP)
@@ -90,12 +91,17 @@ class Problem {
         fetch("http://localhost:3000/solutions", obj)
           .then(resp => resp.json())
           .then(jsObj => {
-            console.log(jsObj)
-            // let newSolution = new Solution(jsObj.data)
-            // newSolution.renderSolution()
+            // console.log(jsObj)
+            const newSolution = new Solution(jsObj.data)
+            const foundProb = Problem.all.find(prob => parseInt(prob.id) === newSolution.problemId)
+            
+            foundProb.solutions.push(newSolution)
+
+            const showSolution = document.createElement("li")
+            showSolution.id = newSolution.id
+            showSolution.innerHTML = newSolution.content
+            document.getElementById("solutionsUl").appendChild(showSolution)
           })
-        // 
-        // 
     }
 
     static renderProblems() {
