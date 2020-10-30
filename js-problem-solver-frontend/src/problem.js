@@ -66,6 +66,9 @@ class Problem {
         container.appendChild(solutionForm)
         // end of createSolution
 
+        solutionForm.addEventListener("submit", this.submitSolution.bind(this))
+    }
+
 
     }
 
