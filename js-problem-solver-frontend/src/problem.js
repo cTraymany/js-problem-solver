@@ -90,7 +90,13 @@ class Problem {
             body: JSON.stringify({solution: {content: content, problem_id: problemId}})
           }
     
-
+        fetch("http://localhost:3000/solutions", obj)
+          .then(resp => resp.json())
+          .then(jsObj => {
+            console.log(jsObj)
+            // let newProblem = new Problem(jsObj.data)
+            // newProblem.renderProblem()
+          })
 
 
         // 
