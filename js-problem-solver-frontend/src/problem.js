@@ -34,13 +34,14 @@ class Problem {
         container.appendChild(problemH3)
         container.appendChild(problemP)
         container.appendChild(answers)
+        container.appendChild(ul)
 
         if (this.solutions.length) {
             this.solutions.forEach(solution => {
                 const showSolution = document.createElement("li")
                 showSolution.id = solution.id
                 showSolution.innerHTML = solution.content
-                container.appendChild(showSolution)
+                ul.appendChild(showSolution)
             })
         } else {
             const sorry = document.createElement("p")
@@ -48,7 +49,7 @@ class Problem {
             container.appendChild(sorry)
         }
 
-
+        // Solution.createSolution()
     }
 
     static renderProblems() {
