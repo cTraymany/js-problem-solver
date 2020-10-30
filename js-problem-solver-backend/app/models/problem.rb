@@ -1,5 +1,4 @@
 class Problem < ApplicationRecord
     has_many :solutions, dependent: :destroy
-    validates :title, presence: true
-    validates :description, presence: true
+    validates :title, :description, presence: true
 end
