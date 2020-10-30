@@ -24,22 +24,40 @@ class Problem {
         const problemP = document.createElement("p")
         const ul = document.createElement("ul")
         const answers = document.createElement("h3")
+        const back = document.createElement("button")
 
         container.innerHTML = ""
+        Solution.createSolutionForm()
         
         problemH3.innerHTML = this.title
         problemP.innerHTML = this.description
         answers.innerHTML = "Solutions"
         ul.setAttribute("id", "solutionsUl")
+        back.innerHTML = "Back"
+        back.setAttribute("id", "cancel")
+        back.setAttribute("class", "btn-primary")
+        back.addEventListener("click", () => location.reload())
         
         container.appendChild(problemH3)
         container.appendChild(problemP)
         container.appendChild(answers)
         container.appendChild(ul)
+        container.appendChild(back)
 
+        // if (this.solutions.length) {
+            this.solutions.forEach(solution => {
+                const showSolution = document.createElement("li")
+                showSolution.id = solution.id
+                showSolution.innerHTML = solution.content
+                ul.appendChild(showSolution)
+            })
+        // } else {
+        //     const sorry = document.createElement("p")
+        //     sorry.innerHTML = "<em>No current solutions</em>"
+        //     container.appendChild(sorry)
+        // }
         // this.showSorryMessage
 
-        Solution.createSolutionForm()
         solutionForm.addEventListener("submit", Solution.submitSolution.bind(this))
     }
 
