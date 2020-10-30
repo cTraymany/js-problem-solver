@@ -8,4 +8,10 @@ class SolutionsController < ApplicationController
             # flash message "enter valid content"
         end
     end
+
+    private
+
+    def solution_params
+        params.require(:solution).permit(:content, :problem_id)
+    end
 end
