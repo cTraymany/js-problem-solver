@@ -69,6 +69,13 @@ class Problem {
         solutionForm.addEventListener("submit", this.submitSolution.bind(this))
     }
 
+    submitSolution() {
+        event.preventDefault()
+        // debugger
+        const content = document.getElementById("solutionContent").value
+        const problemId = this.id
+        // const solution = {solution: {content: content, problem_id: problemId}}
+
 
     }
 
