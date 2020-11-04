@@ -4,8 +4,6 @@ class SolutionsController < ApplicationController
 
         if solution.valid?
             render json: SolutionSerializer.new(solution)
-        # else
-            # flash message "enter valid content"
         end
     end
 

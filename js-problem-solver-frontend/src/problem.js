@@ -60,6 +60,9 @@ class Problem {
                 }
                 this.renderProblems()
             })
+            .catch(error => {
+                console.error(error)
+            })
         }
         
     static createProblem() {

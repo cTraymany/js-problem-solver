@@ -7,8 +7,6 @@ class ProblemsController < ApplicationController
         problem = Problem.create(problem_params)
         if problem.save
             render json: ProblemSerializer.new(problem)
-        # else
-        #     render text: {message: "Please enter a title and description."}
         end
     end
 
