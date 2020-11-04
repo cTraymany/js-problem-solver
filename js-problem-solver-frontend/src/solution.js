@@ -54,5 +54,8 @@ class Solution {
             showSolution.innerHTML = newSolution.content
             document.getElementById("solutionsUl").appendChild(showSolution)
           })
+          .catch( error => {
+            alert("Please enter a solution.")
+          })
     }
 }
