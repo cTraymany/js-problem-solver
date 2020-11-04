@@ -22,6 +22,20 @@ class Problem {
         const input2 = document.createElement("input")
         const submit = document.createElement("input")
         
+        formContainer.setAttribute("id", "formContainer")
+        problemsContainer.setAttribute("id", "problemsContainer")
+        problemForm.setAttribute("id", "problemForm")
+
+        h3.innerHTML = "Problems"
+        label1.innerHTML = "Title "
+        input1.setAttribute("type", "text")
+        input1.setAttribute("id", "problemTitle")
+        label2.innerHTML = "Description "
+        input2.setAttribute("type", "text")
+        input2.setAttribute("id", "problemDescription")
+        submit.setAttribute("type", "submit")
+        submit.setAttribute("class", "btn-primary")
+        
 
     }
 
