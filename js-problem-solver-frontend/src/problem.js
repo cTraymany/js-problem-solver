@@ -10,6 +10,18 @@ class Problem {
     }
 
     static renderProblemForm() {
+        const container = document.getElementById("container")
+        const formContainer = document.createElement("div")
+        const problemsContainer = document.createElement("div")
+        const problemForm = document.createElement("form")
+
+        const h3 = document.createElement("h3")
+        const label1 = document.createElement("label")
+        const label2 = document.createElement("label")
+        const input1 = document.createElement("input")
+        const input2 = document.createElement("input")
+        const submit = document.createElement("input")
+        
 
     }
 
