@@ -36,6 +36,17 @@ class Problem {
         submit.setAttribute("type", "submit")
         submit.setAttribute("class", "btn-primary")
         
+        problemForm.appendChild(label1)
+        problemForm.appendChild(input1)
+        problemForm.appendChild(label2)
+        problemForm.appendChild(input2)
+        problemForm.appendChild(submit, document.createElement("br"))
+
+        container.appendChild(formContainer)
+        container.appendChild(problemsContainer)
+        
+        formContainer.appendChild(problemForm)
+        formContainer.appendChild(h3)
 
     }
 
