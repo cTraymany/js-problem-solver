@@ -25,7 +25,7 @@ class Problem {
         answers.innerHTML = "Solutions"
         ul.setAttribute("id", "solutionsUl")
         back.innerHTML = "Back"
-        back.setAttribute("id", "cancel")
+        back.setAttribute("id", "back")
         back.setAttribute("class", "btn-primary")
         back.addEventListener("click", () => location.reload())
         
@@ -92,13 +92,6 @@ class Problem {
             alert("Please enter a valid title and description.")
         })
     }
-
-    // async postProblem() {
-    //     const url = "http://localhost:3000/problems"
-    //     const response = fetch(url)
-    //     const returnResponse = response
-    // }
-
     
     renderProblem() {
         const div = document.getElementById("problemsContainer")
