@@ -27,7 +27,15 @@ class Problem {
         back.innerHTML = "Back"
         back.setAttribute("id", "back")
         back.setAttribute("class", "btn-primary")
-        back.addEventListener("click", () => location.reload())
+        back.addEventListener("click", () => {
+            const container = document.getElementById("container")
+            container.innerHTML = ""
+            const div = document.createElement("div")
+            div.setAttribute("id", "problemsContainer")
+            container.appendChild(div)
+
+            Problem.renderProblems()
+        })
         
         container.appendChild(problemH3)
         container.appendChild(problemP)
