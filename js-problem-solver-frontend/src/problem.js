@@ -72,10 +72,8 @@ class Problem {
         back.addEventListener("click", () => {
             const container = document.getElementById("container")
             container.innerHTML = ""
-            const div = document.createElement("div")
-            div.setAttribute("id", "problemsContainer")
-            container.appendChild(div)
 
+            Problem.renderProblemForm()
             Problem.renderProblems()
         })
         
