@@ -48,6 +48,7 @@ class Problem {
         formContainer.appendChild(problemForm)
         formContainer.appendChild(h3)
 
+        problemForm.addEventListener("submit", Problem.createProblem)
     }
 
     showSolutionsOnClick() {
