@@ -9,6 +9,10 @@ class Problem {
         Problem.all.push(this)
     }
 
+    static renderProblemForm() {
+
+    }
+
     showSolutionsOnClick() {
         const container = document.getElementById("container")
         const problemH3 = document.createElement("h3")
