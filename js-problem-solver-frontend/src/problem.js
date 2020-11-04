@@ -80,14 +80,22 @@ class Problem {
         }
         
         fetch("http://localhost:3000/problems", obj)
-        .then(async (response) => {
-            return await response.json()
-        })
+        .then((response) => response.json())
         .then(jsObj => {
             let newProblem = new Problem(jsObj.data)
             newProblem.renderProblem()
         })
+        .catch( error => {
+            alert("Please enter a valid title and description.")
+        })
     }
+
+    // async postProblem() {
+    //     const url = "http://localhost:3000/problems"
+    //     const response = fetch(url)
+    //     const returnResponse = response
+    // }
+
     
     renderProblem() {
         const div = document.getElementById("problemsContainer")
