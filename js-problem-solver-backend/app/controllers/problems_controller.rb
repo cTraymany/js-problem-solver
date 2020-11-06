@@ -20,6 +20,8 @@ class ProblemsController < ApplicationController
     def destroy
         if problem = Problem.find(params[:id])
             problem.destroy
+        else
+            render json: {message: "Error! Try again."}
         end
     end
 
