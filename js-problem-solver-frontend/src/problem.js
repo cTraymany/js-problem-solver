@@ -52,6 +52,7 @@ class Problem {
         const ul = document.createElement("ul")
         const answers = document.createElement("h3")
         const back = document.createElement("button")
+        const delButton = document.createElement("button")
         
         container.innerHTML = ""
         Solution.createSolutionForm()
@@ -60,6 +61,12 @@ class Problem {
         problemP.innerHTML = this.description
         answers.innerHTML = "Solutions"
         ul.setAttribute("id", "solutionsUl")
+
+        delButton.innerHTML = "Delete"
+        delButton.setAttribute("id", "delete")
+        delButton.setAttribute("class", "btn-primary")
+        delButton.addEventListener("click", this.deleteProblem.bind(this))
+
         back.innerHTML = "Back"
         back.setAttribute("id", "back")
         back.setAttribute("class", "btn-primary")
@@ -76,6 +83,7 @@ class Problem {
         container.appendChild(answers)
         container.appendChild(ul)
         container.appendChild(back)
+        container.appendChild(delButton)
         
         this.solutions.forEach(solution => {
             const showSolution = document.createElement("li")
@@ -148,9 +156,11 @@ class Problem {
     renderProblem() {
         const div = document.getElementById("problemsContainer")
         const p = document.createElement("p")
+        
+        
         p.innerText = this.title
         p.id = this.id
+        p.addEventListener("click", this.showSolutionsOnClick.bind(this))        
         div.appendChild(p)
-        p.addEventListener("click", this.showSolutionsOnClick.bind(this))
     }
 }
