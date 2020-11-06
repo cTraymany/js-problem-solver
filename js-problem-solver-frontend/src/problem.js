@@ -126,7 +126,7 @@ class Problem {
             })
         }
         
-    static createProblem() {
+    static createProblem(event) {
         event.preventDefault()
         
         const title = document.getElementById("problemTitle").value
@@ -149,7 +149,7 @@ class Problem {
             let newProblem = new Problem(jsObj.data)
             newProblem.renderProblem()
         })
-        .catch( error => {
+        .catch(error => {
             alert("Please enter a valid title and description.")
         })
     }

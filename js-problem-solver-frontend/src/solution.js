@@ -25,7 +25,7 @@ class Solution {
 
     }
 
-    static submitSolution() {
+    static submitSolution(event) {
         event.preventDefault()
         const content = document.getElementById("solutionContent").value
         const problemId = this.id
