@@ -163,4 +163,17 @@ class Problem {
         p.addEventListener("click", this.showSolutionsOnClick.bind(this))        
         div.appendChild(p)
     }
+
+    deleteProblem() {
+        const obj = {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({id: `${this.id}`})
+        }
+
+        fetch(`http://localhost:3000/problems/${this.id}`, obj)
+        location.reload()
+    }
 }
