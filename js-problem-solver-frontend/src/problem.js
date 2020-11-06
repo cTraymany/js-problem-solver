@@ -166,7 +166,7 @@ class Problem {
     }
 
     deleteProblem() {
-        // const container = document.getElementById("container")
+        const container = document.getElementById("container")
         const obj = {
             method: "DELETE",
             headers: {
@@ -177,11 +177,14 @@ class Problem {
         
         fetch(`http://localhost:3000/problems/${this.id}`, obj)
 
-        // container.innerHTML = ""
+        container.innerHTML = ""
         
-        // Problem.renderProblemForm()
-        // Problem.renderProblems()
-                
-        location.reload()
+
+        Problem.all = Problem.all.filter(problem => {
+            return problem.id != parseInt(this.id)
+        })
+
+        Problem.renderProblemForm()
+        Problem.renderProblems()     
     }
 }
