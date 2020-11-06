@@ -10,6 +10,19 @@ class ProblemsController < ApplicationController
         end
     end
 
+    def show
+        problem = Problem.find(params[:id])
+        if problem
+            render json: ProblemSerializer.new(problem)
+        end
+    end
+
+    def destroy
+        if problem = Problem.find(params[:id])
+            problem.destroy
+        end
+    end
+
     private
 
     def problem_params
