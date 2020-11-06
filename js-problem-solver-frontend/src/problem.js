@@ -143,7 +143,7 @@ class Problem {
         }
         
         fetch("http://localhost:3000/problems", obj)
-        .then((response) => response.json())
+        .then(response => response.json())
         .then(jsObj => {
             let newProblem = new Problem(jsObj.data)
             newProblem.renderProblem()
@@ -165,6 +165,7 @@ class Problem {
     }
 
     deleteProblem() {
+        // const container = document.getElementById("container")
         const obj = {
             method: "DELETE",
             headers: {
@@ -172,8 +173,14 @@ class Problem {
             },
             body: JSON.stringify({id: `${this.id}`})
         }
-
+        
         fetch(`http://localhost:3000/problems/${this.id}`, obj)
+
+        // container.innerHTML = ""
+        
+        // Problem.renderProblemForm()
+        // Problem.renderProblems()
+                
         location.reload()
     }
 }
