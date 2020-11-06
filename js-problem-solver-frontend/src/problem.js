@@ -122,6 +122,7 @@ class Problem {
             })
             .catch(error => {
                 console.error(error)
+                alert("Error! Please try again.")
             })
         }
         
