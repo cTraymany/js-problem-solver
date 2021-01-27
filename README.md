@@ -1,6 +1,5 @@
 # Problem Solver
-This Rails with JavaScript single page application allows users to post their problems and receive user-submitted solutions.
-
+Problem Solver has a custom API, generated with the Fast JSON gem to accelerate serialization, containing user-submitted problems and solutions. The JavaScript frontend creates and displays the application in a single, dynamic page, and communicates with the Rails backend models and controllers to parse and validate problem/solution objects. This app is fortified with a Rack-CORS middleware to provide support for cross-origin resource sharing.
 
 ## Getting Started
 ### Prerequisites

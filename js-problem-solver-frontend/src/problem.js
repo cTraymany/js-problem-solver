@@ -4,6 +4,8 @@ class Problem {
     constructor(problem) {
         this.title = problem.attributes.title;
         this.description = problem.attributes.description
+
+        
         this.id = problem.id
         this.solutions = problem.attributes.solutions.map(solution => new Solution(solution))
         Problem.all.push(this)
@@ -131,8 +133,10 @@ class Problem {
         
         const title = document.getElementById("problemTitle").value
         const description = document.getElementById("problemDescription").value
-        document.getElementById("problemTitle").value = ""
-        document.getElementById("problemDescription").value = ""
+
+        event.target.reset()
+        // document.getElementById("problemTitle").value = ""
+        // document.getElementById("problemDescription").value = ""
         
         const obj = {
             method: "POST",
