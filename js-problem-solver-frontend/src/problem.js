@@ -11,6 +11,11 @@ class Problem {
         Problem.all.push(this)
     }
 
+    static start() {
+        Problem.renderProblemForm()
+        Problem.fetchProblems()
+    }
+
     static renderProblemForm() {
         const container = document.getElementById("container")
         const formContainer = document.createElement("div")
