@@ -20,3 +20,22 @@ header img {
 
     opacity: 58%;
 }
+
+header nav {
+    position: absolute;
+    width: 1240px;
+    height: 65px;
+    left: 100px;
+    top: 26px;
+
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+
+    white-space: nowrap;
+    color: #FEFEFE;
+}
+
