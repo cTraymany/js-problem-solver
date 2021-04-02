@@ -11,3 +11,12 @@ header {
     background-color: rgba(16, 14, 10);
 }
 
+header img {
+    position: absolute;
+    width: 2241px;
+    height: 1494px;
+    left: -800px;
+    top: -115px;
+
+    opacity: 58%;
+}
