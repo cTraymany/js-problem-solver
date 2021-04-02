@@ -14,5 +14,10 @@ class App {
                     <p class="action">Get Started</p></div>
             </header>
         `
+        const getStartedNav = document.querySelector(".action-nav-box")
+        getStartedNav.addEventListener("click", Problem.start)
+
+        const getStarted = document.querySelector(".action-box")
+        getStarted.addEventListener("click", Problem.start)
     }
 }
