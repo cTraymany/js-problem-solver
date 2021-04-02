@@ -87,3 +87,22 @@ header nav .logo {
     box-sizing: border-box;
     border-radius: 5px;
 }
+
+.heading {
+    position: absolute;
+    width: 568px;
+    height: 157px;
+    left: 740px;
+    top: 239px;
+
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 72px;
+
+    color: #FEFEFE;
+    white-space: nowrap;
+
+}
+
