@@ -39,3 +39,23 @@ header nav {
     color: #FEFEFE;
 }
 
+header nav .logo {
+    /* position: absolute; */
+    width: 323px;
+    height: 65px;
+    left: 100px;
+    top: 26px;
+
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 163.2%;
+    /* or 65px */
+
+    letter-spacing: 0.03em;
+
+    color: #FEFEFE;
+
+    mix-blend-mode: normal;
+}
