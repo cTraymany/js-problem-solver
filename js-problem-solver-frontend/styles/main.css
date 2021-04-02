@@ -106,3 +106,44 @@ header nav .logo {
 
 }
 
+.action {
+    /* position: relative;
+    margin: 0 auto;
+    width: 84px;
+    height: 30px; */
+    left: 45px;
+    /* top: 439px; */
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+
+    
+    /* left: auto;
+    top: auto; */
+
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+
+
+    color: #FEFEFE;  
+    white-space: nowrap;
+}
+
+.action-box {
+    position: absolute;
+    /* width: auto;
+    height: auto; */
+    width: 221px;
+    height: 50px;
+    left: 745px;
+    top: 429px;
+
+    background: #2BCD43;
+    border-radius: 2px;
+}
