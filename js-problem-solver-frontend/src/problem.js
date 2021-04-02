@@ -12,6 +12,8 @@ class Problem {
     }
 
     static start() {
+        const container = document.getElementById("container")
+        container.innerHTML = "";
         Problem.renderProblemForm()
         Problem.fetchProblems()
     }
