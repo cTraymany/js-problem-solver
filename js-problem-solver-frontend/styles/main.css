@@ -59,3 +59,31 @@ header nav .logo {
 
     mix-blend-mode: normal;
 }
+/* 
+.action-lav (code for left){
+    position: absolute;
+    width: 45px;
+    height: 27px;
+    left: 1100px;
+    top: 46px;
+} */
+
+.action-nav{
+    /* position: absolute; */
+    width: 76px;
+    height: 27px;
+    left: 1127px;
+    top: 46px;
+}
+
+.action-nav-box {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    left: 1190px;
+    top: 41px;
+
+    border: 1px solid #FEFEFE;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
