@@ -62,7 +62,8 @@ class Problem {
         const answers = document.createElement("h3")
         const back = document.createElement("button")
         const delButton = document.createElement("button")
-        
+        const home = document.createElement("button")
+
         container.innerHTML = ""
         Solution.createSolutionForm()
         
@@ -76,7 +77,18 @@ class Problem {
         delButton.setAttribute("class", "btn-primary")
         delButton.addEventListener("click", this.deleteProblem.bind(this))
 
-        back.innerHTML = "Back"
+        home.innerHTML = "Home"
+        home.setAttribute("id", "home")
+        home.setAttribute("class", "btn-primary")
+        home.addEventListener("click", () => {
+            const container = document.getElementById("container")
+            container.innerHTML = ""
+            
+            App.start()
+            // separate method in app so that problems don't render twice
+        })
+
+        back.innerHTML = "Problems"
         back.setAttribute("id", "back")
         back.setAttribute("class", "btn-primary")
         back.addEventListener("click", () => {
@@ -93,6 +105,7 @@ class Problem {
         container.appendChild(ul)
         container.appendChild(back)
         container.appendChild(delButton)
+        container.appendChild(home)
         
         this.solutions.forEach(solution => {
             const showSolution = document.createElement("li")
