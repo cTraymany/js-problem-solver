@@ -147,3 +147,13 @@ header nav .logo {
     background: #2BCD43;
     border-radius: 2px;
 }
+
+.landing-page{
+    position: relative;
+    top: 650px;;
+    width: 1440px;
+    height: 2182px;
+
+    background: #FBFBFB;
+}
+
