@@ -13,6 +13,11 @@ class App {
                 <div class="action-box">
                     <p class="action">Get Started</p></div>
             </header>
+            <section class="landing-page">
+                <div class="selling-points">
+                    We're here to get you there.
+                </div>
+            </section>
         `
         const getStartedNav = document.querySelector(".action-nav-box")
         getStartedNav.addEventListener("click", Problem.start)
