@@ -17,6 +17,7 @@ class Problem {
         Problem.renderProblemForm()
         // if there is a history, use Problem.renderProblems. Otherwise, use problem.fetchProblems.
         Problem.fetchProblems()
+        console.log(window.history.length()) //window.history returns undefined
     }
 
     static renderProblemForm() {
