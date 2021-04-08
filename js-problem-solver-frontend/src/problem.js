@@ -15,6 +15,7 @@ class Problem {
         const container = document.getElementById("container")
         container.innerHTML = "";
         Problem.renderProblemForm()
+        // if there is a history, use Problem.renderProblems. Otherwise, use problem.fetchProblems.
         Problem.fetchProblems()
     }
 
@@ -84,7 +85,7 @@ class Problem {
             // separate method in app so that problems don't render twice
         })
 
-        back.innerHTML = "Problems"
+        back.innerHTML = "Back to Problems"
         back.setAttribute("id", "back")
         back.setAttribute("class", "btn-primary")
         back.addEventListener("click", () => {
