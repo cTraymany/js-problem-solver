@@ -95,13 +95,7 @@ class Problem {
             Problem.renderProblems()
         })
         
-        container.appendChild(problemH3)
-        container.appendChild(problemP)
-        container.appendChild(answers)
-        container.appendChild(ul)
-        container.appendChild(back)
-        container.appendChild(delButton)
-        container.appendChild(home)
+        container.append(problemH3, problemP, answers, ul, back, delButton, home)
         
         this.solutions.forEach(solution => {
             const showSolution = document.createElement("li")
