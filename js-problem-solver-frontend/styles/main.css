@@ -13,7 +13,7 @@ header {
 
 header img {
     position: absolute;
-    width: 2241px;
+    width: 2240px;
     height: 1494px;
     left: -800px;
     top: -115px;
@@ -40,13 +40,13 @@ header nav {
 }
 
 header nav .logo {
-    /* position: absolute; */
+    position: relative;
     width: 323px;
     height: 65px;
-    left: 100px;
-    top: 26px;
+    /* left: 100px; */
+    /* top: 26px; */
 
-    font-family: Merriweather;
+    font-family: 'Merriweather';
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
@@ -69,24 +69,22 @@ header nav .logo {
 } */
 
 .action-nav{
-    /* position: absolute; */
-    width: 76px;
-    height: 27px;
-    left: 1127px;
-    top: 46px;
+    position: relative;
+    display: flex;
 }
 
 .action-nav-box {
-    position: absolute;
+    position: relative;
+    display: inline-block;
     width: 150px;
     height: 40px;
-    left: 1190px;
-    top: 41px;
+    left: 765px;
+    top: -6px;
 
     border: 1px solid #FEFEFE;
     box-sizing: border-box;
     border-radius: 5px;
-    padding-left: 25px;
+    padding-left: 36px;
     padding-top: 5px;
 }
 
@@ -97,7 +95,7 @@ header nav .logo {
     left: 740px;
     top: 239px;
 
-    font-family: Oswald;
+    font-family: 'Oswald';
     font-style: normal;
     font-weight: bold;
     font-size: 64px;
@@ -125,7 +123,7 @@ header nav .logo {
     /* left: auto;
     top: auto; */
 
-    font-family: Oswald;
+    font-family: 'Oswald';
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -148,13 +146,16 @@ header nav .logo {
 
     background: #2BCD43;
     border-radius: 2px;
+    padding-top: 0px;
+    padding-left: 18px;
 }
 
 .landing-page{
-    position: relative;
-    top: 650px;;
+    position: absolute;
+    top: 651px;;
     width: 1440px;
     height: 2182px;
+    left: 0px;
 
     background: #FBFBFB;
 }
