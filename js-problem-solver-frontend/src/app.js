@@ -11,7 +11,8 @@ class App {
                 <div class="heading">We all have problems.<br />
                     Let us solve yours!</div>
                 <div class="action-box">
-                    <p class="action">Get Started</p></div>
+                    <p class="action">Get Started</p>
+                </div>
             </header>
             <section class="landing-page">
                 <div class="selling-points">
