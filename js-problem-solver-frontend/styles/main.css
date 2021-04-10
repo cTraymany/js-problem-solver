@@ -67,6 +67,39 @@ header nav .logo {
     top: 46px;
 } */
 
+.action {
+    left: 46px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+
+    color: #FEFEFE;  
+}
+
+.action-box {
+    position: absolute;
+    /* width: auto;
+    height: auto; */
+    width: 221px;
+    height: 50px;
+    left: 745px;
+    top: 429px;
+
+    background: #2BCD43;
+    border-radius: 2px;
+    padding-top: 0px;
+    padding-left: 18px;
+}
+
 .action-nav{
     position: relative;
     display: flex;
@@ -101,39 +134,6 @@ header nav .logo {
     line-height: 72px;
 
     color: #FEFEFE;
-}
-
-.action {
-    left: 46px;
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-    padding: 10px;
-    position: relative;
-
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 30px;
-    /* identical to box height */
-
-    color: #FEFEFE;  
-}
-
-.action-box {
-    position: absolute;
-    /* width: auto;
-    height: auto; */
-    width: 221px;
-    height: 50px;
-    left: 745px;
-    top: 429px;
-
-    background: #2BCD43;
-    border-radius: 2px;
-    padding-top: 0px;
-    padding-left: 18px;
 }
 
 .landing-page{
