@@ -35,7 +35,6 @@ header nav {
     line-height: 27px;
     /* identical to box height */
 
-    white-space: nowrap;
     color: #FEFEFE;
 }
 
@@ -102,8 +101,6 @@ header nav .logo {
     line-height: 72px;
 
     color: #FEFEFE;
-    white-space: nowrap;
-
 }
 
 .action {
@@ -169,8 +166,6 @@ header nav .logo {
     font-size: 48px;
     line-height: 127.2%;
     /* identical to box height, or 61px */
-
-    white-space: nowrap;
 
     color: #0C0C0C;
 }
