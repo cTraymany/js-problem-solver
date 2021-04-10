@@ -107,21 +107,12 @@ header nav .logo {
 }
 
 .action {
-    /* position: relative;
-    margin: 0 auto;
-    width: 84px;
-    height: 30px; */
-    left: 45px;
-    /* top: 439px; */
+    left: 46px;
     width: auto;
     height: auto;
     margin: 0 auto;
     padding: 10px;
     position: relative;
-
-    
-    /* left: auto;
-    top: auto; */
 
     font-family: 'Oswald';
     font-style: normal;
@@ -130,9 +121,7 @@ header nav .logo {
     line-height: 30px;
     /* identical to box height */
 
-
     color: #FEFEFE;  
-    white-space: nowrap;
 }
 
 .action-box {
