@@ -40,6 +40,7 @@ header nav {
 
 header nav .logo {
     position: relative;
+    display: inline-block;
     width: 323px;
     height: 65px;
     /* left: 100px; */
@@ -117,7 +118,7 @@ header nav .logo {
     box-sizing: border-box;
     border-radius: 5px;
     padding-left: 36px;
-    padding-top: 5px;
+    padding-top: 6px;
 }
 
 .heading {
