@@ -147,20 +147,14 @@ header nav .logo {
 }
 
 .selling-points {
-    /* position: absolute;
-    width: 1440px;
-    height: 425px;
-    left: 0px; */
-    /* top: 728px; */
-
     position: absolute;
     width: 535px;
     height: 61px;
     left: 400px;
     /* top: 790px; */
-    top: 100px;;
+    top: 100px;
 
-    font-family: Oswald;
+    font-family: 'Oswald';
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
