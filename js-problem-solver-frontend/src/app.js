@@ -5,17 +5,17 @@ class App {
             <header>
                 <img src="./img/pexels-nathan-cowley-897817.jpg">
                 <nav>
-                    <span class="logo">Problem Solver</span>
-                    <span class="action-nav-box"><div class=action-nav>Get Started</div></span>
+                    <h1 class="logo">Problem Solver</h1>
+                    <div class="action-nav-box"><div class=action-nav>Get Started</div></div>
                 </nav>
-                <div class="heading">We all have problems.<br />
-                    Let us solve yours!</div>
+                <h2 class="heading">We all have problems. Let us solve yours!</h2>
                 <div class="action-box">
                     <p class="action">Get Started</p>
                 </div>
             </header>
             <section class="landing-page">
                 <div class="selling-points-container">
+                    <h3 class="selling-points-header">We're here to get you there.</h3>
                     <div class="line line-one"></div>
                     <div class="line line-two"></div>
                 </div>
