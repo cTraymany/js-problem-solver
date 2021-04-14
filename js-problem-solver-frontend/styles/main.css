@@ -26,9 +26,9 @@ header nav {
     width: 1240px;
     height: 65px;
     left: 100px;
-    top: 26px;
+    /* top:0px; */
 
-    font-family: Oswald;
+    font-family: 'Oswald';
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -126,7 +126,7 @@ header nav .logo {
     width: 568px;
     height: 157px;
     left: 740px;
-    top: 239px;
+    top: 200px;
 
     font-family: 'Oswald';
     font-style: normal;
@@ -166,7 +166,7 @@ header nav .logo {
     left: 960px;
 }
 
-.selling-points {
+.selling-points-header {
     position: absolute;
     width: 535px;
     height: 61px;
