@@ -16,7 +16,8 @@ class App {
             </header>
             <section class="landing-page">
                 <div class="selling-points-container">
-                    
+                    <div class="line line-one"></div>
+                    <div class="line line-two"></div>
                 </div>
             </section>
         `
