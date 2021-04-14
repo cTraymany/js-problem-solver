@@ -15,8 +15,8 @@ class App {
                 </div>
             </header>
             <section class="landing-page">
-                <div class="selling-points">
-                    We're here to get you there.
+                <div class="selling-points-container">
+                    
                 </div>
             </section>
         `
