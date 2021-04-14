@@ -157,6 +157,15 @@ header nav .logo {
     transform: rotate(90deg);
 }
 
+.line-one {
+    left: 490px;
+
+}
+
+.line-two {
+    left: 960px;
+}
+
 .selling-points {
     position: absolute;
     width: 535px;
