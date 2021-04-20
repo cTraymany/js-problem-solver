@@ -16,6 +16,10 @@ class App {
             <section class="landing-page">
                 <div class="selling-points-container">
                     <h3 class="selling-points-header">We're here to get you there.</h3>
+                    <div class="selling-point-div-one">
+                        <p class="title-one">Easy to use</p>
+                        <p class="selling-point-one">Solving problems  has never been so easy. Get started in minutes!</p>
+                    </div>
                     <div class="line line-one"></div>
                     <div class="line line-two"></div>
                 </div>
