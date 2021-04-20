@@ -275,3 +275,21 @@ header nav .logo {
     left: 1100px;
     top: 20px;
 }
+
+.title-one {
+    position: relative;
+    width: 145px;
+    height: 46px;
+    left: 0px;
+    top: 0px;
+
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 127.2%;
+    /* identical to box height, or 46px */
+
+
+    color: #0C0C0C;
+}
