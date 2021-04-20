@@ -21,6 +21,10 @@ class App {
                         <p class="selling-point-one">Solving problems  has never been so easy. Get started in minutes!</p>
                     </div>
                     <div class="line line-one"></div>
+                    <div class="selling-point-two">
+                        <p class="title-two">You're protected</p>
+                        <p>All problems are fully encrypted to ensure complete privacy.</p>
+                    </div>
                     <div class="line line-two"></div>
                 </div>
             </section>
