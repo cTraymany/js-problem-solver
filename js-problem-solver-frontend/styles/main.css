@@ -251,3 +251,11 @@ header nav .logo {
     
     color: #484848;
 }
+
+.selling-point-div-one {
+    position: relative;
+    width: 230px;
+    height: 154px;
+    left: 200px;
+    top: 40%;
+}
