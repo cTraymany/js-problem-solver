@@ -211,3 +211,24 @@ header nav .logo {
     
     color: #484848;
 }
+
+.selling-point-two {
+    /* All problems are fully encrypted to ensure complete privacy. */
+
+    position: relative;
+    width: 230px;
+    height: 93px;
+    left: 605px;
+    top: 100px;
+
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 127.2%;
+    /* or 31px */
+
+    text-align: center;
+
+    color: #484848;
+}
