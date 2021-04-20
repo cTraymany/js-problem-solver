@@ -313,3 +313,21 @@ header nav .logo {
 
     color: #0C0C0C;
 }
+
+.title-three {
+    position: relative;
+    width: 147px;
+    height: 46px;
+    left: 18%;
+    top: 0px;
+    
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 127.2%;
+    /* identical to box height, or 46px */
+    
+    
+    color: #0C0C0C;
+}
