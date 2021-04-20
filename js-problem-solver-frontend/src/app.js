@@ -26,6 +26,10 @@ class App {
                         <p>All problems are fully encrypted to ensure complete privacy.</p>
                     </div>
                     <div class="line line-two"></div>
+                    <div class="selling-point-div-three">
+                        <p class="title-three">Try for free</p>
+                        <p class="selling-point-three">Solve your first problem for free, there are no hidden fees. Yes--we’re serious.</p>
+                    </div>
                 </div>
             </section>
         `
