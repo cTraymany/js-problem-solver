@@ -3,6 +3,7 @@ class Solution {
         this.content = solution.attributes.content
         this.id = solution.id
         this.problemId = solution.attributes.problem_id
+        this.userId = solution.attributes.user_id
     }
 
     static createSolutionForm() {
