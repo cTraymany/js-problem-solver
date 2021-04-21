@@ -3,33 +3,34 @@ function loadLoginScreen() {
         <div class="login-container">
             <form id="login-form">
                 <label>Email: </label>
-                <input type="text"></input><br>
+                <input type="text" name="email"></input><br>
 
                 <label>Password: </label>
-                <input type="password"></input><br>
+                <input type="password" name="password"></input><br>
 
                 <input type="submit" value="Login"></input>
             </form>
         </div><br><br>
         <div>
-            <form>
+            <form id="signup-form">
                 <label>Username: </label>
-                <input type="text"></input><br>
+                <input type="text" name="username"></input><br>
                 
                 <label>Email: </label>
-                <input type="text"></input><br>
+                <input type="text" name="email"></input><br>
                 
                 <label>Password: </label>
-                <input type="password"></input><br>
+                <input type="password" name="password"></input><br>
                 
                 <input type="submit" value="Sign Up"></input>
             </form>
         </div>
     `
     const loginForm = document.getElementById("login-form")
+
     loginForm.addEventListener("submit", (event) => {
-            event.preventDefault()
-            console.log(this)
+        event.preventDefault()
+
     })
 
     // TODO: when the login form is submit
