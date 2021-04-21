@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_26_203755) do
+ActiveRecord::Schema.define(version: 2021_04_21_011052) do
 
   create_table "problems", force: :cascade do |t|
     t.string "title"
@@ -25,6 +25,12 @@ ActiveRecord::Schema.define(version: 2020_10_26_203755) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["problem_id"], name: "index_solutions_on_problem_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "email"
+    t.string "password_digest"
   end
 
   add_foreign_key "solutions", "problems"
