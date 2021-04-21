@@ -6,17 +6,21 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Problem.create(title: "Project Confusion", description: "How can I start building my JS project?")
+User.create(username: "Google", email: "Google@gmail.com", password: "GoogleLove")
+User.create(username: "Apple", email: "Jobs@iCloud.com", password: "AppleLove")
+User.create(username: "Bill", email: "Bill@outlook.com", password: "MicrosoftLove")
+
+Problem.create(title: "Project Confusion", description: "How can I start building my JS project?", user_id: 1)
 # problem id: 1
-Solution.create(content: "Start by reviewing the video lectures provided by your instructor!", problem_id: 1)
+Solution.create(content: "Start by reviewing the video lectures provided by your instructor!", problem_id: 1, user_id: 2)
 # solution id: 1
-Solution.create(content: "Read some blogs on Rails with JS!", problem_id: 1)
+Solution.create(content: "Read some blogs on Rails with JS!", problem_id: 1, user_id: 3)
 # solution id: 2
 
 
-Problem.create(title: "Plants Keep Dying", description: "I want house plants, but they keep dying")
+Problem.create(title: "Plants Keep Dying", description: "I want house plants, but they keep dying", user_id: 2)
 # problem id: 2
-Solution.create(content: "Check them for pests", problem_id: 2)
+Solution.create(content: "Check them for pests", problem_id: 2, user_id: 1)
 # solution id: 3
-Solution.create(content: "Google the proper way to care for individual plants", problem_id: 2)
+Solution.create(content: "Google the proper way to care for individual plants", problem_id: 2, user_id: 3)
 # solution id: 4
