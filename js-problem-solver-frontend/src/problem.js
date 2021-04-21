@@ -7,6 +7,7 @@ class Problem {
 
         
         this.id = problem.id
+        this.userId = solution.attributes.user_id
         this.solutions = problem.attributes.solutions.map(solution => new Solution(solution))
         Problem.all.push(this)
     }
