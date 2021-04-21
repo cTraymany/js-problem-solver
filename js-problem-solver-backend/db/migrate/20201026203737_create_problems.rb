@@ -3,6 +3,7 @@ class CreateProblems < ActiveRecord::Migration[6.0]
     create_table :problems do |t|
       t.string :title
       t.string :description
+      t.belongs_to :user
 
       t.timestamps
     end
