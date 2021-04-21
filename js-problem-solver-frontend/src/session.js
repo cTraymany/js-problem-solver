@@ -26,5 +26,14 @@ function loadLoginScreen() {
             </form>
         </div>
     `
+    const loginForm = document.getElementById("login-form")
+    loginForm.addEventListener("submit", (event) => {
+            event.preventDefault()
+            console.log(this)
+    })
 
+    // TODO: when the login form is submit
+    // you must create a new user session and navigate to the problems page.
+    // add an event listener to the sign up form to create a new user.
+    // set up user#create and session#create actions in rails.
 }
