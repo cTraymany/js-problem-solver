@@ -7,7 +7,7 @@ function loadLoginScreen() {
                 <input type="password" name="password" placeholder="Password" id="login-password"></input><br>
                 <input type="submit" value="Login"></input>
             </form>
-        </div><br><br>
+        </div>
         <div>
             <form id="signup-form">
                 <label>Sign Up</label><br>
