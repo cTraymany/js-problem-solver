@@ -61,6 +61,12 @@ function loadLoginScreen() {
             })
     })
 
+    const signupForm = document.getElementById("signup-form")
+
+    signupForm.addEventListener("submit", (event) => {
+            event.preventDefault()
+            console.log("Create a new user!")
+    })
 
     // TODO: when the login form is submit
     // you must create a new user session and navigate to the problems page.
