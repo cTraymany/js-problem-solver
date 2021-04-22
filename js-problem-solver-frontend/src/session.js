@@ -2,25 +2,18 @@ function loadLoginScreen() {
     container.innerHTML = `
         <div class="login-container">
             <form id="login-form">
-                <label>Email: </label>
-                <input type="text" name="email" id="login-email"></input><br>
-
-                <label>Password: </label>
-                <input type="password" name="password" id="login-password"></input><br>
-
+                <label>Login</label><br>
+                <input type="text" name="email" placeholder="Email" id="login-email"></input><br>
+                <input type="password" name="password" placeholder="Password" id="login-password"></input><br>
                 <input type="submit" value="Login"></input>
             </form>
         </div><br><br>
         <div>
             <form id="signup-form">
-                <label>Username: </label>
-                <input type="text" name="username"></input><br>
-                
-                <label>Email: </label>
-                <input type="text" name="email"></input><br>
-                
-                <label>Password: </label>
-                <input type="password" name="password"></input><br>
+                <label>Sign Up</label><br>
+                <input type="text" name="username" placeholder="Username"></input><br>
+                <input type="text" name="email" placeholder="Email"></input><br>
+                <input type="password" name="password" placeholder="Password"></input><br>
                 
                 <input type="submit" value="Sign Up"></input>
             </form>
