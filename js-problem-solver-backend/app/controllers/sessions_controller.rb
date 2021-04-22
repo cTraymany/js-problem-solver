@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
     def create
         user = User.find_by(email: params[:user][:email])
-        if user && user.authenticate(params[:user][:password])  
+        if user && user.authenticate(params[:user][:password])
             session[:username] = user.username
             render json: user         
         else             
@@ -14,7 +14,8 @@ class SessionsController < ApplicationController
     end
 
     def destroy
-        # destroy login session (log user out)
+        session.clear
+        # redirect to landing page in front end
     end
 
     # def google_login
