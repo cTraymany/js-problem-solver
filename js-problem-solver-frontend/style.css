@@ -16,3 +16,15 @@ body {
 a {
     text-decoration: none;
 }
+
+.logo {
+    font-family: "Merriweather";
+}
+
+.nav-button {
+    border-style: solid;
+    /* border-color: #FEFEFE; */
+    padding: 5px 50px;
+    border-radius: 10px;
+    border-width: 1.5px;
+}
