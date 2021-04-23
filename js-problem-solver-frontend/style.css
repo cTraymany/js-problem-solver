@@ -28,3 +28,20 @@ a {
     border-radius: 10px;
     border-width: 1.5px;
 }
+
+.desktop-nav {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 26px 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* z-index: 1; */
+}
+
+.desktop-nav .menu-items {
+    display: flex;
+    list-style: none;
+}
