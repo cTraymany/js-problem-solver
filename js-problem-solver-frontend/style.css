@@ -45,3 +45,20 @@ a {
     display: flex;
     list-style: none;
 }
+
+.desktop-nav .menu-items li {
+    margin: 0 25px;
+}
+
+.desktop-nav .menu-items li:nth-child(2) {
+    margin-top: -6px;
+}
+
+.desktop-nav .menu-items li a {
+    /* color: #FEFEFE; */
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+}
