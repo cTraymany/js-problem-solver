@@ -63,6 +63,22 @@ a {
     line-height: 27px;
 }
 
+.hero-container {
+    /* position: absolute; */
+    width: 1440px;
+    height: 651px;
+    left: 0px;
+    top: 0px;
+
+    background-image: url('./img/pexels-nathan-cowley-897817.png');
+    /* background-color: #C4C4C4; */
+    /* background: rgba(16, 14, 10, 0.58); */
+}
+
 .inactive {
     display: none;
 }
+/* 
+.wrapper {
+    position: relative;
+} */
