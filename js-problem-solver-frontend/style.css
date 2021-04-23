@@ -83,15 +83,18 @@ a {
     top: 0px;
 
     z-index: -1;
+    background-color: rgba(16, 14, 10);
+}
 
-    background-image: url('./img/pexels-nathan-cowley-897817.png');
-    /* background-color: #C4C4C4; */
-    /* background: rgba(16, 14, 10, 0.58); */
+.hero-container img {
+    opacity: 58%;
 }
 
 .hero-container .right {
     position: relative;
     color: #FEFEFE;
+
+    z-index: 1;
 }
 
 .hero-container .right h2 {
