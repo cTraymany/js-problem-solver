@@ -12,6 +12,8 @@
 body {
     font-family: "Oswald";
     background-color: var(--light-background-color);
+    width: 1440px;
+    height: 2182px;
 }
 
 a {
@@ -43,7 +45,6 @@ a {
 }
 
 .desktop-nav {
-    width: 1440px;
     margin: 0 auto;
     padding: 26px 100px;
 
@@ -78,7 +79,6 @@ a {
 
 .hero-container {
     position: absolute;
-    width: 1440px;
     height: 651px;
     left: 0px;
     top: 0px;
