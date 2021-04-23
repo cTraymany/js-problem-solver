@@ -1,7 +1,7 @@
 :root {
     --button-color: #2BCD43;
-    --light-background-color: #E5E5E5;
-    --dark-background-color: #F5F5F5;
+    --dark-background-color: #E5E5E5;
+    --light-background-color: #F5F5F5;
 }
 
 * {
@@ -11,6 +11,7 @@
 
 body {
     font-family: "Oswald";
+    background-color: var(--light-background-color);
 }
 
 a {
