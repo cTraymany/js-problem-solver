@@ -89,6 +89,41 @@ a {
     /* background: rgba(16, 14, 10, 0.58); */
 }
 
+.hero-container .right {
+    position: relative;
+    color: #FEFEFE;
+}
+
+.hero-container .right h2 {
+    position: absolute;
+    width: 568px;
+    height: 157px;
+    left: 730px;
+    top: 239px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 72px;
+}
+
+.hero-container .right a {
+    position: absolute;
+    width: 221px;
+    height: 50px;
+    left: 732px;
+    top: 429px;
+
+    background-color: var(--button-color);
+    border-radius: 2px;
+    padding: 10px 68px;
+
+    color: #FEFEFE;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+}
 
 .inactive {
     display: none;
