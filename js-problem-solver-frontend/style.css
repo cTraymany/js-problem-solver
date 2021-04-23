@@ -62,3 +62,7 @@ a {
     font-size: 18px;
     line-height: 27px;
 }
+
+.inactive {
+    display: none;
+}
