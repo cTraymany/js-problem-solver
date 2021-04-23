@@ -17,13 +17,25 @@ a {
     text-decoration: none;
 }
 
-.logo {
+.logo a h1 {
     font-family: "Merriweather";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 163.2%;
+    /* or 65px */
+
+    width: 323px;
+    height: 65px;
+
+    letter-spacing: 0.03em;
+
+    color: #FEFEFE;
 }
 
 .nav-button {
     border-style: solid;
-    /* border-color: #FEFEFE; */
+    border-color: #FEFEFE;
     padding: 5px 50px;
     border-radius: 10px;
     border-width: 1.5px;
@@ -55,7 +67,7 @@ a {
 }
 
 .desktop-nav .menu-items li a {
-    /* color: #FEFEFE; */
+    color: #FEFEFE;
 
     font-style: normal;
     font-weight: normal;
@@ -64,16 +76,19 @@ a {
 }
 
 .hero-container {
-    /* position: absolute; */
+    position: absolute;
     width: 1440px;
     height: 651px;
     left: 0px;
     top: 0px;
 
+    z-index: -1;
+
     background-image: url('./img/pexels-nathan-cowley-897817.png');
     /* background-color: #C4C4C4; */
     /* background: rgba(16, 14, 10, 0.58); */
 }
+
 
 .inactive {
     display: none;
