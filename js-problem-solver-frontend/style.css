@@ -195,6 +195,25 @@ a {
     color: #484848;
 }
 
+.testimonials-container {
+    position: absolute;
+    width: 1440px;
+    height: 519px;
+
+    top: 1240px;
+    padding: 0 260px;
+}
+
+.testimonials-container h3 {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 127.2%;
+    color: #0C0C0C;
+    text-align: center;
+}
+
+
+
 /* .wrapper {
     position: relative;
 } */
