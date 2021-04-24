@@ -32,7 +32,7 @@ a {
 .logo h1 {
     font-family: "Merriweather";
     font-weight: bold;
-    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 163.2%;
     /* or 65px */
 
@@ -80,7 +80,7 @@ a {
 .desktop-nav .menu-items li a {
     color: #FEFEFE;
 
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 27px;
 }
 
@@ -112,7 +112,7 @@ a {
     top: 239px;
 
     font-weight: bold;
-    font-size: 64px;
+    font-size: 4rem;
     line-height: 72px;
 }
 
@@ -129,7 +129,7 @@ a {
     padding: 10px 68px;
 
     color: #FEFEFE;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 30px;
 }
 
@@ -153,7 +153,7 @@ a {
     margin: 62px 452px;
 
     font-weight: bold;
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 127.2%;
     /* identical to box height, or 61px */
 
@@ -190,7 +190,7 @@ a {
 }
 
 .selling-points-container .selling-points h4 {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: normal;
     line-height: 127.2%;
     color: #0C0C0C;
@@ -199,7 +199,7 @@ a {
 
 .selling-points-container .selling-points p {
     padding-top: 15px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 300;
     line-height: 127.2%;
     color: #484848;
@@ -216,7 +216,7 @@ a {
 
 .testimonials-container h3 {
     font-weight: bold;
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 127.2%;
     color: #0C0C0C;
     text-align: center;
@@ -247,7 +247,7 @@ a {
 
 .testimonials div {
     margin-left: 28px;
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 127.2%;
 }
 
@@ -276,7 +276,7 @@ a {
 .call-to-action h3 {
     position: absolute;
     font-weight: bold;
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 127.2%;
     /* identical to box height, or 61px */
     width: 1440px;
@@ -298,6 +298,6 @@ a {
     padding: 10px 54px;
 
     color: #FEFEFE;
-    font-size: 20px;
+    font-size: 1.23rem;
     line-height: 30px;
 }
