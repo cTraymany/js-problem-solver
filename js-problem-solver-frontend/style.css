@@ -127,6 +127,14 @@ a {
     display: none;
 }
 
+.selling-points-container {
+    position: relative;
+    height: 425px;
+    top: 611px;
+
+    background-color: var(--medium-background-color);
+}
+
 /* .wrapper {
     position: relative;
 } */
