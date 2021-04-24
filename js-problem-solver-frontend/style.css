@@ -165,6 +165,20 @@ a {
     /* border-right: solid; */
     text-align: center;
 }
+
+.selling-points .line {
+    position: absolute;
+    width: 86px;
+    height: 0px;
+    top: 75px;
+    margin-left: 300px;
+
+    transform: rotate(90deg);
+    /* border: 0.5px  solid #484848; */
+    border: 0.4pt solid #CCC;
+
+}
+
 /* .wrapper {
     position: relative;
 } */
