@@ -1,7 +1,8 @@
 :root {
     --button-color: #2BCD43;
     --dark-background-color: #E5E5E5;
-    --light-background-color: #F5F5F5;
+    --medium-background-color: #F5F5F5;
+    --light-background-color: #FBFBFB;
 }
 
 * {
@@ -11,9 +12,10 @@
 
 body {
     font-family: "Oswald";
+    font-style: normal;
     background-color: var(--light-background-color);
     width: 1440px;
-    height: 2182px;
+    /* height: 2182px; */
 }
 
 a {
@@ -22,7 +24,6 @@ a {
 
 .logo a h1 {
     font-family: "Merriweather";
-    font-style: normal;
     font-weight: bold;
     font-size: 40px;
     line-height: 163.2%;
@@ -51,8 +52,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    /* z-index: 1; */
 }
 
 .desktop-nav .menu-items {
@@ -71,8 +70,6 @@ a {
 .desktop-nav .menu-items li a {
     color: #FEFEFE;
 
-    font-style: normal;
-    font-weight: normal;
     font-size: 18px;
     line-height: 27px;
 }
@@ -105,7 +102,6 @@ a {
     left: 730px;
     top: 239px;
 
-    font-style: normal;
     font-weight: bold;
     font-size: 64px;
     line-height: 72px;
@@ -123,8 +119,6 @@ a {
     padding: 10px 68px;
 
     color: #FEFEFE;
-    font-style: normal;
-    font-weight: normal;
     font-size: 20px;
     line-height: 30px;
 }
@@ -132,7 +126,7 @@ a {
 .inactive {
     display: none;
 }
-/* 
-.wrapper {
+
+/* .wrapper {
     position: relative;
 } */
