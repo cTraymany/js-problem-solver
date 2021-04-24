@@ -87,7 +87,7 @@ class Problem {
             // separate method in app so that problems don't render twice
         })
 
-        back.innerHTML = "Back to Problems"
+        back.innerHTML = "Back"
         back.setAttribute("id", "back")
         back.setAttribute("class", "btn-primary")
         back.addEventListener("click", () => {
@@ -98,7 +98,8 @@ class Problem {
             Problem.renderProblems()
         })
         
-        container.append(problemH3, problemP, answers, ul, back, delButton, home)
+        container.append(problemH3, problemP, answers, ul, back, delButton)
+        // container.append(home)
         
         this.solutions.forEach(solution => {
             const showSolution = document.createElement("li")
