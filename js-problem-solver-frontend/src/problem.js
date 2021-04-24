@@ -44,11 +44,7 @@ class Problem {
         submit.setAttribute("type", "submit")
         submit.setAttribute("class", "btn-primary")
         
-        problemForm.appendChild(label1)
-        problemForm.appendChild(input1)
-        problemForm.appendChild(label2)
-        problemForm.appendChild(input2)
-        problemForm.appendChild(submit, document.createElement("br"))
+        problemForm.append(label1,label2, input2, submit, document.createElement("br"))
         
         container.appendChild(formContainer)
         
@@ -65,7 +61,8 @@ class Problem {
         const answers = document.createElement("h3")
         const back = document.createElement("button")
         const delButton = document.createElement("button")
-        
+        const home = document.createElement("button")
+
         container.innerHTML = ""
         Solution.createSolutionForm()
         
@@ -79,7 +76,18 @@ class Problem {
         delButton.setAttribute("class", "btn-primary")
         delButton.addEventListener("click", this.deleteProblem.bind(this))
 
-        back.innerHTML = "Back"
+        home.innerHTML = "Home"
+        home.setAttribute("id", "home")
+        home.setAttribute("class", "btn-primary")
+        home.addEventListener("click", () => {
+            const container = document.getElementById("container")
+            container.innerHTML = ""
+            
+            App.start()
+            // separate method in app so that problems don't render twice
+        })
+
+        back.innerHTML = "Back to Problems"
         back.setAttribute("id", "back")
         back.setAttribute("class", "btn-primary")
         back.addEventListener("click", () => {
@@ -90,12 +98,7 @@ class Problem {
             Problem.renderProblems()
         })
         
-        container.appendChild(problemH3)
-        container.appendChild(problemP)
-        container.appendChild(answers)
-        container.appendChild(ul)
-        container.appendChild(back)
-        container.appendChild(delButton)
+        container.append(problemH3, problemP, answers, ul, back, delButton, home)
         
         this.solutions.forEach(solution => {
             const showSolution = document.createElement("li")
