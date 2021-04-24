@@ -212,7 +212,44 @@ a {
     text-align: center;
 }
 
+.testimonials {
+    list-style: none;
+    margin-top: 41px;
+    padding: 0;
+}
 
+.testimonials li {
+    display: flex;
+    margin-top: 39px;
+}
+
+.testimonials li:nth-child(2) {
+    padding-left: 247px;
+}
+
+.testimonials li:nth-child(3) {
+    padding-left: 50px;
+}
+
+.testimonials li img {
+    border-radius: 50%;
+}
+
+.testimonials div {
+    margin-left: 28px;
+    font-size: 24px;
+    line-height: 127.2%;
+}
+
+.testimonials h5 {
+    font-weight: bold;
+    color: #0C0C0C;
+}
+
+.testimonials p {
+    font-weight: 300;
+    color: #484848;
+}
 
 /* .wrapper {
     position: relative;
