@@ -11,6 +11,16 @@ class Problem {
         Problem.all.push(this)
     }
 
+    static start() {
+        const container = document.getElementById("container")
+
+        document.body.style.background = "cadetblue"
+        container.innerHTML = "";
+
+        Problem.renderProblemForm()
+        Problem.fetchProblems()
+    }
+
     static renderProblemForm() {
         const container = document.getElementById("container")
         const formContainer = document.createElement("div")
