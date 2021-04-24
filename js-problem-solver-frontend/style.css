@@ -52,12 +52,15 @@ a {
 }
 
 .desktop-nav {
+    position: relative;
     margin: 0 auto;
     padding: 26px 100px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    z-index: 1;
 }
 
 .desktop-nav .menu-items {
@@ -86,7 +89,6 @@ a {
     left: 0px;
     top: 0px;
 
-    z-index: -1;
     background-color: rgba(16, 14, 10);
 }
 
@@ -114,6 +116,7 @@ a {
 }
 
 .hero-container .right a {
+    /* Get Started button */
     position: absolute;
     width: 221px;
     height: 50px;
