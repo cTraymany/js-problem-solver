@@ -179,6 +179,22 @@ a {
 
 }
 
+.selling-points-container .selling-points h4 {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 127.2%;
+    color: #0C0C0C;
+}
+
+
+.selling-points-container .selling-points p {
+    padding-top: 15px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 127.2%;
+    color: #484848;
+}
+
 /* .wrapper {
     position: relative;
 } */
