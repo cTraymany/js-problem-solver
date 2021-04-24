@@ -135,6 +135,20 @@ a {
     background-color: var(--medium-background-color);
 }
 
+.selling-points-container h3 {
+    position: absolute;
+    width: 535px;
+    height: 61px;
+
+    margin: 62px 452px;
+
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 127.2%;
+    /* identical to box height, or 61px */
+
+    color: #0C0C0C;
+}
 /* .wrapper {
     position: relative;
 } */
