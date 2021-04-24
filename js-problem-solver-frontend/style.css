@@ -15,7 +15,13 @@ body {
     font-style: normal;
     background-color: var(--light-background-color);
     width: 1440px;
-    /* height: 2182px; */
+    height: 2182px;
+    /* height: 100%; */
+    margin-bottom: 89px;
+}
+
+html {
+    height: 100%;
 }
 
 a {
@@ -251,3 +257,43 @@ a {
     color: #484848;
 }
 
+.call-to-action {
+    position: absolute;
+    width: 1440px;
+    height: 234px;
+
+    top: 1859px;
+    margin-bottom: 89px;
+
+    background: var(--medium-background-color)
+    
+}
+
+.call-to-action h3 {
+    position: absolute;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 127.2%;
+    /* identical to box height, or 61px */
+    width: 1440px;
+    top: 49px;
+
+    text-align: center;
+    color: #0C0C0C;
+}
+
+.call-to-action a {
+    position: absolute;
+    width: 225px;
+    height: 50px;
+    left: 608px;
+    top: 126px;
+
+    background-color: var(--button-color);
+    border-radius: 2px;
+    padding: 10px 54px;
+
+    color: #FEFEFE;
+    font-size: 20px;
+    line-height: 30px;
+}
