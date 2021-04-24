@@ -13,11 +13,12 @@ class Problem {
 
     static start() {
         const container = document.getElementById("container")
+
+        document.body.style.background = "cadetblue"
         container.innerHTML = "";
+
         Problem.renderProblemForm()
-        // if there is a history, use Problem.renderProblems. Otherwise, use problem.fetchProblems.
         Problem.fetchProblems()
-        console.log(window.history.length()) //window.history returns undefined
     }
 
     static renderProblemForm() {
