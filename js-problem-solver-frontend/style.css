@@ -149,6 +149,22 @@ a {
 
     color: #0C0C0C;
 }
+
+.selling-points {
+    position: absolute;
+    list-style: none;
+    display: flex;
+    top: 180px;
+}
+
+.selling-points li {
+    width: 240px;
+    height: 154px;
+    margin: 0 100px;
+    align-content: center;
+    /* border-right: solid; */
+    text-align: center;
+}
 /* .wrapper {
     position: relative;
 } */
