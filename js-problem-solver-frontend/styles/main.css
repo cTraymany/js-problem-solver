@@ -33,8 +33,7 @@ a {
     font-family: "Merriweather";
     font-weight: bold;
     font-size: 2.5rem;
-    line-height: 163.2%;
-    /* or 65px */
+    line-height: 1.5;
 
     width: 323px;
     height: 65px;
@@ -81,7 +80,7 @@ a {
     color: #FEFEFE;
 
     font-size: 1.125rem;
-    line-height: 27px;
+    line-height: 1.5;
 }
 
 .hero-container {
@@ -113,7 +112,7 @@ a {
 
     font-weight: bold;
     font-size: 4rem;
-    line-height: 72px;
+    line-height: 1.125;
 }
 
 .hero-container .right a {
@@ -130,7 +129,7 @@ a {
 
     color: #FEFEFE;
     font-size: 1.25rem;
-    line-height: 30px;
+    line-height: 1.5;
 }
 
 .inactive {
@@ -154,8 +153,7 @@ a {
 
     font-weight: bold;
     font-size: 3rem;
-    line-height: 127.2%;
-    /* identical to box height, or 61px */
+    line-height: 1.25;
 
     color: #0C0C0C;
 }
@@ -192,7 +190,7 @@ a {
 .selling-points-container .selling-points h4 {
     font-size: 2.25rem;
     font-weight: normal;
-    line-height: 127.2%;
+    line-height: 1.25;
     color: #0C0C0C;
 }
 
@@ -201,7 +199,7 @@ a {
     padding-top: 15px;
     font-size: 1.5rem;
     font-weight: 300;
-    line-height: 127.2%;
+    line-height: 1.5;
     color: #484848;
 }
 
@@ -217,7 +215,7 @@ a {
 .testimonials-container h3 {
     font-weight: bold;
     font-size: 3rem;
-    line-height: 127.2%;
+    line-height: 1.25;
     color: #0C0C0C;
     text-align: center;
 }
@@ -248,7 +246,7 @@ a {
 .testimonials div {
     margin-left: 28px;
     font-size: 1.5rem;
-    line-height: 127.2%;
+    line-height: 1.5;
 }
 
 .testimonials h5 {
@@ -277,8 +275,7 @@ a {
     position: absolute;
     font-weight: bold;
     font-size: 3rem;
-    line-height: 127.2%;
-    /* identical to box height, or 61px */
+    line-height: 1.25;
     width: 1440px;
     top: 49px;
 
@@ -298,6 +295,6 @@ a {
     padding: 10px 54px;
 
     color: #FEFEFE;
-    font-size: 1.23rem;
-    line-height: 30px;
+    font-size: 1.25rem;
+    line-height: 1.5;
 }
