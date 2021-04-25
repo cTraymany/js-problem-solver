@@ -15,7 +15,7 @@ body {
     font-family: var(--primary-font);
     font-style: normal;
     background-color: var(--light-background-color);
-    width: 1440px;
+    /* width: 1440px; */
     height: 2182px;
     /* height: 100%; */
     margin-bottom: 89px;
@@ -137,9 +137,14 @@ a {
 }
 
 .selling-points-container {
-    position: relative;
+    position: absolute;
     height: 425px;
-    top: 611px;
+    width: 1440px;
+    /* width: 100%; */
+    /* width: min(90%, 100%); */
+
+
+    top: 728px;
 
     background-color: var(--medium-background-color);
 }
@@ -297,4 +302,9 @@ a {
     color: #FEFEFE;
     font-size: 1.25rem;
     line-height: 1.5;
+}
+
+.wrapper {
+    /* margin-inline: auto; */
+    width: min(90%, 70.5rem);
 }
