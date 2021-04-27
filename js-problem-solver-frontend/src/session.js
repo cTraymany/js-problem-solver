@@ -31,6 +31,7 @@ function loadLoginScreen() {
 
         const jsObj = {
             method: "POST",
+            credentials: "same-origin",
             headers: {
               "Content-Type": "application/json",
               "Accept": "application/json"
@@ -43,9 +44,15 @@ function loadLoginScreen() {
             .then(jsObj => {
                 console.log(jsObj)
                 if (jsObj.logged_in) {
+                    localStorage.setItem("username", jsObj.session.username)
+                    localStorage.setItem("userId", jsObj.session.id)
+                    localStorage.setItem("loggedIn", true)
+                    console.log(localStorage)
+                    
                     container.innerHTML = ""
                     Problem.renderProblemForm()
                     Problem.fetchProblems()
+                    const userId = jsObj.session.id
                     // add welcome message to display user information.
                     // if user is already logged in, redirect to another page
                 } else {
