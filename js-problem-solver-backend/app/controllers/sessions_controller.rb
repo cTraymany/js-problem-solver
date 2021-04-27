@@ -1,12 +1,17 @@
 class SessionsController < ApplicationController
     def create
-        user = User.find_by(email: params[:user][:email])
-        if user && user.authenticate(params[:user][:password])
-            session[:user_id] = user.id
-            # session[:username] = user.username
-            render json: user
+        user = User.find_by(email: session_params[:email])
+        if user && user.authenticate(session_params[:password])
+            session[:username] = user.username
+            render json: {
+                logged_in: true,
+                session: user
+            }
         else             
-            render json: {errors: "Unable to authenticate user."}        
+            render json: {
+                logged_in: false,
+                errors: "Unable to authenticate user."
+            }        
         end
     end
 
@@ -18,10 +23,13 @@ class SessionsController < ApplicationController
     # def google_login
     # end
 
-    # private
+    private
 
     # def auth_hash
+        # for google login
     # end
 
-    # add session_?params.require().permit()
+    def session_params
+        params.require(:user).permit(:email, :password)
+    end
 end
