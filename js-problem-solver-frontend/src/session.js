@@ -42,13 +42,16 @@ function loadLoginScreen() {
             .then(resp => resp.json())
             .then(jsObj => {
                 console.log(jsObj)
-                // if jsObj has an id, do the following.
+                if (jsObj.logged_in) {
                     container.innerHTML = ""
                     Problem.renderProblemForm()
                     Problem.fetchProblems()
                     // add welcome message to display user information.
                     // if user is already logged in, redirect to another page
-                // end
+                } else {
+                    console.log(error)
+                    alert("Please enter a valid login.")
+                }
             })
             .catch( error => {
                 console.log(error)
