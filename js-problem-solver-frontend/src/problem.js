@@ -12,6 +12,13 @@ class Problem {
         Problem.all.push(this)
     }
 
+    static start() {
+        Problem.fetchProblems()
+        Problem.renderProblemForm()
+        document.body.style.background = "cadetblue"
+        const logoutButton = document.getElementById("")
+    }
+
     static renderProblemForm() {
         const container = document.getElementById("container")
         const formContainer = document.createElement("div")
@@ -130,18 +137,18 @@ class Problem {
         
         const title = document.getElementById("problemTitle").value
         const description = document.getElementById("problemDescription").value
+        const userId = localStorage.userId
 
         event.target.reset()
-        // document.getElementById("problemTitle").value = ""
-        // document.getElementById("problemDescription").value = ""
         
         const obj = {
             method: "POST",
+            credentials: "same-origin",
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            body: JSON.stringify({problem: {title: title, description: description}})
+            body: JSON.stringify({problem: {title: title, description: description, user_id: userId}})
         }
         
         fetch("http://localhost:3000/problems", obj)
