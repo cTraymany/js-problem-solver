@@ -168,7 +168,6 @@ function loadSignupPage() {
             const username = document.getElementById("signup-username").value
             const email = document.getElementById("signup-email").value
             const password = document.getElementById("signup-password").value
-            const passwordConfirmation = document.getElementById("signup-password-confirmation").value
             event.target.reset()
     
             const jsObj = {
@@ -178,7 +177,7 @@ function loadSignupPage() {
                   "Content-Type": "application/json",
                   "Accept": "application/json"
                 },
-                body: JSON.stringify({user: {username: username, email: email, password: password, password_confirmation: passwordConfirmation}})
+                body: JSON.stringify({user: {username: username, email: email, password: password}})
             }
     
             fetch("http://localhost:3000/signup", jsObj)
@@ -186,8 +185,8 @@ function loadSignupPage() {
             .then(jsObj => {
                 console.log(jsObj)
                 if (jsObj.logged_in) {
-                    localStorage.setItem("username", jsObj.session.username)
-                    localStorage.setItem("userId", jsObj.session.id)
+                    localStorage.setItem("username", jsObj.session.data.attributes.username)
+                    localStorage.setItem("userId", jsObj.session.data.id)
                     localStorage.setItem("loggedIn", true)
                     console.log(localStorage)
                     
@@ -195,13 +194,11 @@ function loadSignupPage() {
                     
                     Problem.start()
                     // ^^ONCE LOGGED IN, LOAD THE WELCOME SCREEN INSTEAD OF NAVIGATING TO PROBLEMS RIGHT AWAY
-                    // const userId = jsObj.session.id
-                    // ^^what is this variable set for???
                     // add welcome message to display user information.
                 } else {
                     console.log(error)
                     alert("Cannot create user.")
-                    // change alert to render something prettier
+                    // change alert to render something prettier instead of an ugly alert popup
                 }
             })
             .catch( error => {
@@ -209,4 +206,22 @@ function loadSignupPage() {
                 alert("Please enter a valid login.")
             })
         })
+}
+
+function logout() {
+    const logoutButton = document.getElementById("logout-button")
+
+    const obj = {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }
+    
+    fetch("http://localhost:3000/logout", obj)
+
+    localStorage.clear()
+    location.reload()
+    
+    logoutButton.classList.add("inactive")
 }
