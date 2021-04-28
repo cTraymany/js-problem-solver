@@ -3,6 +3,7 @@ class Solution {
         this.content = solution.attributes.content
         this.id = solution.id
         this.problemId = solution.attributes.problem_id
+        this.userId = solution.attributes.user_id
     }
 
     static createSolutionForm() {
@@ -29,16 +30,19 @@ class Solution {
         event.preventDefault()
         const content = document.getElementById("solutionContent").value
         const problemId = this.id
+        const userId = localStorage.userId
+        console.log(localStorage)
 
         document.getElementById("solutionContent").value = ""
 
         const obj = {
             method: "POST",
+            credentials: "same-origin",
             headers: {
               "Content-Type": "application/json",
               "Accept": "application/json"
             },
-            body: JSON.stringify({solution: {content: content, problem_id: problemId}})
+            body: JSON.stringify({solution: {content: content, problem_id: problemId, user_id: userId}})
           }
     
         fetch("http://localhost:3000/solutions", obj)
@@ -46,7 +50,7 @@ class Solution {
           .then(jsObj => {
             const newSolution = new Solution(jsObj.data)
             const foundProb = Problem.all.find(prob => parseInt(prob.id) === newSolution.problemId)
-            
+
             foundProb.solutions.push(newSolution)
 
             const showSolution = document.createElement("li")

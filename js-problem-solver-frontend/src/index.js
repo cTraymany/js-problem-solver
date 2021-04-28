@@ -1,7 +1,26 @@
-const getStarted = document.getElementById("get-started")
-getStarted.addEventListener("click", Problem.start)
-// start app on click for now, but nav to signup page once auth is set up
+if (localStorage.loggedIn) {
+    Problem.start()
+} else {
+    loadLandingPage()
+}
 
-const solveAProblem = document.getElementById("solve-a-problem")
-solveAProblem.addEventListener("click", Problem.start)
-// start app on click for now, but nav to signup page once auth is set up
+const logo = document.getElementById("logo")
+
+logo.addEventListener("click", event => {
+    event.preventDefault()
+    document.body.style.background = ""
+
+    if (localStorage.loggedIn) {
+        document.body.style.background = "pink"
+        console.log("load the welcome page!")
+    } else {
+        loadLandingPage()
+    }
+})
+
+// window.addEventListener("load", event => localStorage.setItem("fetched", false))
+
+// if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+//     localStorage.setItem("fetched", false)
+//     console.log(localStorage.fetched)
+// }
