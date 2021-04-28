@@ -10,6 +10,6 @@ class SolutionsController < ApplicationController
     private
 
     def solution_params
-        params.require(:solution).permit(:content, :problem_id)
+        params.require(:solution).permit(:content, :problem_id, :user_id)
     end
 end
