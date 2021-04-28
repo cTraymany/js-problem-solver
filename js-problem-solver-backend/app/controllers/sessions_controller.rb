@@ -17,7 +17,6 @@ class SessionsController < ApplicationController
 
     def destroy
         session.clear
-        # redirect to landing page in front end
     end
 
     # def google_login
