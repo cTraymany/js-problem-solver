@@ -30,6 +30,8 @@ class Solution {
         event.preventDefault()
         const content = document.getElementById("solutionContent").value
         const problemId = this.id
+        const userId = localStorage.userId
+        console.log(localStorage)
 
         document.getElementById("solutionContent").value = ""
 
@@ -40,7 +42,7 @@ class Solution {
               "Content-Type": "application/json",
               "Accept": "application/json"
             },
-            body: JSON.stringify({solution: {content: content, problem_id: problemId}})
+            body: JSON.stringify({solution: {content: content, problem_id: problemId, user_id: userId}})
           }
     
         fetch("http://localhost:3000/solutions", obj)
@@ -48,7 +50,7 @@ class Solution {
           .then(jsObj => {
             const newSolution = new Solution(jsObj.data)
             const foundProb = Problem.all.find(prob => parseInt(prob.id) === newSolution.problemId)
-            
+
             foundProb.solutions.push(newSolution)
 
             const showSolution = document.createElement("li")
