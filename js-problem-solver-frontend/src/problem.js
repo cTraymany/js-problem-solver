@@ -23,14 +23,8 @@ class Problem {
 
         const logoutButton = document.getElementById("logout-button")
         logoutButton.classList.remove("inactive")
-        
-        logoutButton.addEventListener("click", event => {
-            event.preventDefault()
-            // make a post request to delete session in backend
-            localStorage.clear()
-            location.reload()
-            logoutButton.classList.add("inactive")
-        })
+
+        logoutButton.addEventListener("click", event => logout())
     }
 
     static renderProblemForm() {
