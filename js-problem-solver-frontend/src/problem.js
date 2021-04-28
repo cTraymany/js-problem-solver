@@ -20,7 +20,18 @@ class Problem {
 
         Problem.renderProblemForm()
         Problem.fetchProblems()
-        // add logout button upon starting
+
+        const logoutButton = document.getElementById("logout-button")
+        logoutButton.classList.remove("inactive")
+        
+        logoutButton.addEventListener("click", event => {
+            event.preventDefault()
+            // make a post request to delete session in backend
+            localStorage.clear()
+            loadLandingPage()
+            document.body.style.background = ""
+            logoutButton.classList.add("inactive")
+        })
     }
 
     static renderProblemForm() {
@@ -46,7 +57,7 @@ class Problem {
         submit.setAttribute("type", "submit")
         submit.setAttribute("class", "btn-primary")
         
-        problemForm.append(label1,label2, input2, submit, document.createElement("br"))
+        problemForm.append(label1,input1, label2, input2, submit, document.createElement("br"))
         
         container.appendChild(formContainer)
         
