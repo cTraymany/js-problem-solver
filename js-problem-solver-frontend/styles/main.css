@@ -44,7 +44,7 @@ a {
     color: #FEFEFE;
 }
 
-.nav-button {
+.bordered-button {
     border-style: solid;
     border-color: #FEFEFE;
     padding: 5px 50px;
@@ -64,20 +64,24 @@ a {
     z-index: 1;
 }
 
-.desktop-nav .menu-items {
+/* desktop-nav */
+.menu-items {
     display: flex;
     list-style: none;
 }
 
-.desktop-nav .menu-items li {
+/* desktop-nav */
+.menu-items li {
     margin: 0 25px;
 }
 
-.desktop-nav .menu-items li:nth-child(2) {
+/* desktop-nav */
+.menu-items li:nth-child(2) {
     margin-top: -6px;
 }
 
-.desktop-nav .menu-items li a {
+/* desktop-nav */
+.menu-items li a {
     color: #FEFEFE;
 
     font-size: 18px;
