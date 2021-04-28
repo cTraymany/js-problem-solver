@@ -16,8 +16,8 @@ body {
     font-style: normal;
     background-color: var(--light-background-color);
     width: 1440px;
-    height: 2182px;
-    /* height: 100%; */
+    /* height: 2182px; */
+    height: 100%;
     margin-bottom: 89px;
 }
 
@@ -271,7 +271,7 @@ a {
     height: 234px;
 
     top: 1859px;
-    margin-bottom: 89px;
+    padding-bottom: 89px;
 
     background: var(--medium-background-color)
     
