@@ -28,8 +28,7 @@ class Problem {
             event.preventDefault()
             // make a post request to delete session in backend
             localStorage.clear()
-            loadLandingPage()
-            document.body.style.background = ""
+            location.reload()
             logoutButton.classList.add("inactive")
         })
     }
