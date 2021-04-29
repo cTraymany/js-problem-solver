@@ -9,6 +9,9 @@
 * {
     margin: 0;
     box-sizing: border-box;
+
+    backround: #000 !important;
+    color: #111 !important;
 }
 
 body {
@@ -270,7 +273,7 @@ a {
     margin-bottom: 89px;
 
     background: var(--medium-background-color)
-    
+
 }
 
 .call-to-action h3 {

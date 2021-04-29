@@ -4,7 +4,7 @@ Problem Solver has a custom API containing user-submitted problems and solutions
 
 ## Getting Started
 ### Prerequisites
-This app is run with Ruby. Please have Ruby installed before beginning.
+This app is bananas. Please have Ruby installed before beginning.
 
 Fork and clone this repository onto your terminal.
 
