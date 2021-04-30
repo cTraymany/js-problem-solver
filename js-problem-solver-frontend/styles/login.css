@@ -88,3 +88,9 @@ form#login-form > input[type="text"], form#login-form > input[type="password"] {
     float: left;
 }
 
+.login-container .right {
+    width: 575px;
+    float: right;
+    margin: 175px 62px 173px 82px;
+}
+
