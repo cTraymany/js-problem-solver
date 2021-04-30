@@ -77,17 +77,17 @@ function loadLandingPage() {
 
 function loadLoginPage() {
         container.innerHTML = `
-            <article class="signup-page">
-				<div class="login-container">
+            <article class="signin-page">
+				<div class="auth-container">
 					<div class="left">
 						<div class="blue-rectangle"></div>
-						<img id="signin-img" src="./img/signin-design.png">
+						<img id="auth-img" src="./img/auth-design.png">
 					</div>
 					<div class="right">
 						<h2>Welcome back</h2>
 						<h3>Sign in</h3>
 						<form id="login-form">
-							<label >Email</label><br>
+							<label>Email</label><br>
 							<input type="text" name="email" id="login-email"></input><br>
 							<label>Password</label><br>
 							<input type="password" name="password" id="login-password"></input><br>
@@ -163,25 +163,44 @@ function loadLoginPage() {
 
 function loadSignupPage() {
         container.innerHTML = `
-            <div>
-                <form id="signup-form">
-                    <label>Sign Up</label><br>
-                    <input type="text" name="username" placeholder="Username" id="signup-username"></input><br>
-                    <input type="text" name="email" placeholder="Email" id="signup-email"></input><br>
-                    <input type="password" name="password" placeholder="Password" id="signup-password"></input><br>
-                    <input type="password" name="password-confirmation" placeholder="Confirm Password" id="signup-password-confirmation"></input><br>
-                    
-                    <input type="submit" value="Sign Up"></input>
-                </form>
-            </div>
+            <article class="signup-page">
+                <div class="auth-container">
+                    <div class="left">
+                        <div class="blue-rectangle"></div>
+                        <img id="auth-img" src="./img/auth-design.png">
+                    </div>
+                    <div class="right">
+                        <h2>Welcome to Problem Solver</h2>
+                        <h3>Create an account to get started</h3>
+                        <form id="signup-form">
+                            <label>Username</label><br>
+                            <input type="text" name="username" id="signup-username"></input><br>
+                            <label>Email</label><br>
+                            <input type="text" name="email" id="signup-email"></input><br>
+                            <label>Password</label><br>
+                            <input type="text" name="password" id="signup-password"></input><br>
+                            <label>Confirm Password</label><br>
+                            <input type="text" name="password-confirmation" id="signup-password-confirmation"></input><br>
+                            <div class="checkbox-container inactive">
+                                <div class="checkbox"></div>
+                                <p>Keep me logged in</p>
+                            </div>
+                            <input id="signup-page-button" type="submit" value="Sign up"></input>
+                        </form>
+                    </div>
+                </div>
+                <footer class="inactive">
+                    <ul class="fine-print">
+                        <li>Terms and conditions</li>
+                        <li>Privacy policy</li>
+                        <li>Contact us</li>
+                    </ul>
+                </footer>
+            </article>
         `
     
-        document.body.style.background = "cadetblue"
-    
-        const loginButton = document.getElementById("login-button")
-        const signupButton = document.getElementById("signup-button")
-        loginButton.classList.add("inactive")
-        signupButton.classList.add("inactive")
+        const nav = document.getElementById("desktop-nav")
+        nav.classList.add("auth-page-nav")
     
         const signupForm = document.getElementById("signup-form")
     
@@ -225,7 +244,7 @@ function loadSignupPage() {
             })
             .catch( error => {
                 console.log(error)
-                alert("Please enter a valid login.")
+                alert("Please try again.")
             })
         })
 }

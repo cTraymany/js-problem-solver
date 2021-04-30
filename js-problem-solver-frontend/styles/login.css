@@ -19,7 +19,7 @@
     margin-top: -8px;
 }
 
-.login-container {
+.auth-container {
     display: flex;
     margin: 120px 244px;
     box-shadow: 13px 13px 28px rgba(0, 0, 0, 0.25);
@@ -27,10 +27,10 @@
     background: #FFFEFE;
 }
 
-.login-container .right h2 {
+.auth-container .right h2 {
     margin: 0 138px;
 
-    width: 140px;
+    width: 256px;
     height: 36px;
 
     font-family: "Oswald";
@@ -43,7 +43,7 @@
     color: #282828;
 }
 
-.login-container .right h3 {
+.auth-container .right h3 {
     margin: 0 185px;
 
     width: 41px;
@@ -83,18 +83,18 @@ form#login-form > input[type="text"], form#login-form > input[type="password"] {
     background: #004362;
 }
 
-.login-container .left {
+.auth-container .left {
     position: relative;
     float: left;
 }
 
-.login-container .right {
+.auth-container .right {
     width: 575px;
     float: right;
     margin: 175px 62px 173px 82px;
 }
 
-#signin-img {
+#auth-img {
     position: absolute;
     top: 34px;
     left: -89px;
