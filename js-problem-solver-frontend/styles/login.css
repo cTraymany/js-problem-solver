@@ -94,3 +94,10 @@ form#login-form > input[type="text"], form#login-form > input[type="password"] {
     margin: 175px 62px 173px 82px;
 }
 
+#signin-img {
+    position: absolute;
+    top: 34px;
+    left: -89px;
+    width: 436.49px;
+    height: 625.01px;
+}
