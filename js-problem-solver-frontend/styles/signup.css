@@ -1,1 +1,6 @@
-/*  */
+.signup-page .auth-container .right {
+    width: 575px;
+    float: right;
+    /* margin: 175px 62px 173px 82px; */
+    margin: 116px 62px 116px 82px;
+}
