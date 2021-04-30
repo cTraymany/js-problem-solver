@@ -17,8 +17,6 @@ Fork and clone this repository onto your terminal.
     <!-- CD into frontend -->
     $ open index.html
 
-    Navigate to http://localhost:3000 in your browser.
-
 ### Built With
 [VS Code](https://code.visualstudio.com/) - text editor
 
