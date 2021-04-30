@@ -28,3 +28,7 @@
 
     margin-top: 20px;
 }
+
+#signup-page-button:hover {
+    cursor: pointer;
+}
