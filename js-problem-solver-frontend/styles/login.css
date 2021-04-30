@@ -27,3 +27,19 @@
     background: #FFFEFE;
 }
 
+.login-container .right h2 {
+    margin: 0 138px;
+
+    width: 140px;
+    height: 36px;
+
+    font-family: "Oswald";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+
+    letter-spacing: -0.0127em;
+
+    color: #282828;
+}
+
