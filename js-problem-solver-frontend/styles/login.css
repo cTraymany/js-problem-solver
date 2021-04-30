@@ -71,3 +71,7 @@ form#login-form > label {
     color: #282828;
 }
 
+form#login-form > input[type="text"], form#login-form > input[type="password"] {
+    width: 431px;
+    height: 40px;
+}
