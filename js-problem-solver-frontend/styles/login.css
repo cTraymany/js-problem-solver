@@ -101,3 +101,11 @@ form#login-form > input[type="text"], form#login-form > input[type="password"] {
     width: 436.49px;
     height: 625.01px;
 }
+
+.fine-print {
+    padding-top: 44px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
