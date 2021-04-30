@@ -44,3 +44,8 @@ form#signup-form > label {
     
     color: #282828;
 }
+
+form#signup-form > input[type="text"], form#signup-form > input[type="password"] {
+    width: 431px;
+    height: 40px;
+}
