@@ -43,3 +43,19 @@
     color: #282828;
 }
 
+.login-container .right h3 {
+    margin: 0 185px;
+
+    width: 41px;
+    height: 27px;
+
+    font-family: "Oswald";
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+
+    letter-spacing: -0.0127em;
+
+    color: #282828;
+}
+
