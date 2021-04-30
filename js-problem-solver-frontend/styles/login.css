@@ -75,3 +75,11 @@ form#login-form > input[type="text"], form#login-form > input[type="password"] {
     width: 431px;
     height: 40px;
 }
+
+.blue-rectangle {
+    width: 376px;
+    height: 604px;
+
+    background: #004362;
+}
+
