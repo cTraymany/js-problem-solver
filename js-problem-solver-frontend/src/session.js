@@ -1,4 +1,7 @@
 function loadLandingPage() {
+    const nav = document.getElementById("desktop-nav")
+    nav.classList.remove("auth-page-nav")
+
     container.innerHTML = `
         <header class="hero-container">
             <div class="right">
@@ -96,7 +99,7 @@ function loadLoginPage() {
 						</form>
 					</div>
 				</div>
-				<footer>
+				<footer class="inactive">
 					<ul class="fine-print">
 						<li>Terms and conditions</li>
 						<li>Privacy policy</li>
@@ -105,12 +108,9 @@ function loadLoginPage() {
 				</footer>
 			</article>
         `
-        document.body.style.background = "cadetblue"
     
-        const loginButton = document.getElementById("login-button")
-        const signupButton = document.getElementById("signup-button")
-        loginButton.classList.add("inactive")
-        signupButton.classList.add("inactive")
+        const nav = document.getElementById("desktop-nav")
+        nav.classList.add("auth-page-nav")
     
         const loginForm = document.getElementById("login-form")
     
