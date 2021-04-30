@@ -83,3 +83,8 @@ form#login-form > input[type="text"], form#login-form > input[type="password"] {
     background: #004362;
 }
 
+.login-container .left {
+    position: relative;
+    float: left;
+}
+
