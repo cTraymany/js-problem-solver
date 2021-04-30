@@ -130,3 +130,30 @@ form#login-form > input[type="text"], form#login-form > input[type="password"] {
 #signin-page-button:hover {
     cursor: pointer;
 }
+
+.login-form .checkbox::after {
+    font-size: 40px;
+    color: "orange";
+}
+
+.checkbox {
+    border: 1px solid #282828;
+    width: 25px;
+    height: 25px;
+    padding-top: 25px;
+    padding-left: 25px;
+    border-radius: 2px;
+}
+
+.checkbox-container {
+    display: flex;
+    margin-top: 26px;
+}
+
+.checkbox-container p {
+    padding-left: 10px;
+}
+
+.inactive {
+    display: none;
+}
