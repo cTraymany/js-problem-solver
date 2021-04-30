@@ -9,3 +9,13 @@
     color: black;
 }
 
+.auth-page-nav .menu-items li a {
+    color: black;
+    font-family: "raleway";
+
+}
+
+.auth-page-nav .menu-items li:nth-child(2) {
+    margin-top: -8px;
+}
+
