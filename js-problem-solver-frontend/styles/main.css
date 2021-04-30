@@ -52,7 +52,7 @@ a {
     border-width: 1.5px;
 }
 
-.desktop-nav {
+#desktop-nav {
     position: relative;
     margin: 0 auto;
     padding: 26px 100px;
