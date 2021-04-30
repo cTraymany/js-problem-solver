@@ -109,3 +109,7 @@ form#login-form > input[type="text"], form#login-form > input[type="password"] {
     justify-content: center;
 }
 
+.fine-print li {
+    margin: 0 44px;
+    padding-bottom: 30px;
+}
