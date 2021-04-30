@@ -126,3 +126,7 @@ form#login-form > input[type="text"], form#login-form > input[type="password"] {
 
     margin-top: 20px;
 }
+
+#signin-page-button:hover {
+    cursor: pointer;
+}
