@@ -25,6 +25,15 @@ class Problem {
         logoutButton.classList.remove("inactive")
 
         logoutButton.addEventListener("click", event => logout())
+
+        const nav = document.getElementById("desktop-nav")
+
+        nav.classList.remove("auth-page-nav")
+                        
+        const loginButton = document.getElementById("login-button")
+        const signupButton = document.getElementById("signup-button")
+        loginButton.classList.add("inactive")
+        signupButton.classList.add("inactive")
     }
 
     static renderProblemForm() {

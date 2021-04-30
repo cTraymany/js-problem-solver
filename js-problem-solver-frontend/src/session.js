@@ -1,4 +1,7 @@
 function loadLandingPage() {
+    const nav = document.getElementById("desktop-nav")
+    nav.classList.remove("auth-page-nav")
+
     container.innerHTML = `
         <header class="hero-container">
             <div class="right">
@@ -74,21 +77,40 @@ function loadLandingPage() {
 
 function loadLoginPage() {
         container.innerHTML = `
-            <div class="login-container">
-                <form id="login-form">
-                    <label>Login</label><br>
-                    <input type="text" name="email" placeholder="Email" id="login-email"></input><br>
-                    <input type="password" name="password" placeholder="Password" id="login-password"></input><br>
-                    <input type="submit" value="Login"></input>
-                </form>
-            </div>
+            <article class="signup-page">
+				<div class="login-container">
+					<div class="left">
+						<div class="blue-rectangle"></div>
+						<img id="signin-img" src="./img/signin-design.png">
+					</div>
+					<div class="right">
+						<h2>Welcome back</h2>
+						<h3>Sign in</h3>
+						<form id="login-form">
+							<label >Email</label><br>
+							<input type="text" name="email" id="login-email"></input><br>
+							<label>Password</label><br>
+							<input type="password" name="password" id="login-password"></input><br>
+							<div class="checkbox-container inactive">
+								<div class="checkbox"></div>
+								<p>Keep me logged in</p>
+							</div>
+							<input id="signin-page-button" type="submit" value="Sign in"></input>
+						</form>
+					</div>
+				</div>
+				<footer class="inactive">
+					<ul class="fine-print">
+						<li>Terms and conditions</li>
+						<li>Privacy policy</li>
+						<li>Contact us</li>
+					</ul>
+				</footer>
+			</article>
         `
-        document.body.style.background = "cadetblue"
     
-        const loginButton = document.getElementById("login-button")
-        const signupButton = document.getElementById("signup-button")
-        loginButton.classList.add("inactive")
-        signupButton.classList.add("inactive")
+        const nav = document.getElementById("desktop-nav")
+        nav.classList.add("auth-page-nav")
     
         const loginForm = document.getElementById("login-form")
     
