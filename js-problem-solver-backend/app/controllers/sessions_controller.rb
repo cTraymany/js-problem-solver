@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
         else             
             render json: {
                 logged_in: false,
-                errors: "Unable to authenticate user."
+                error: "Unable to authenticate user."
             }        
         end
     end
