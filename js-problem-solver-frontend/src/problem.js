@@ -7,6 +7,7 @@ class Problem {
 
         
         this.id = problem.id
+        this.userId = problem.attributes.user_id
         this.solutions = problem.attributes.solutions.map(solution => new Solution(solution))
         Problem.all.push(this)
     }
@@ -19,6 +20,20 @@ class Problem {
 
         Problem.renderProblemForm()
         Problem.fetchProblems()
+
+        const logoutButton = document.getElementById("logout-button")
+        logoutButton.classList.remove("inactive")
+
+        logoutButton.addEventListener("click", event => logout())
+
+        const nav = document.getElementById("desktop-nav")
+
+        nav.classList.remove("auth-page-nav")
+                        
+        const loginButton = document.getElementById("login-button")
+        const signupButton = document.getElementById("signup-button")
+        loginButton.classList.add("inactive")
+        signupButton.classList.add("inactive")
     }
 
     static renderProblemForm() {
@@ -44,7 +59,7 @@ class Problem {
         submit.setAttribute("type", "submit")
         submit.setAttribute("class", "btn-primary")
         
-        problemForm.append(label1,label2, input2, submit, document.createElement("br"))
+        problemForm.append(label1,input1, label2, input2, submit, document.createElement("br"))
         
         container.appendChild(formContainer)
         
@@ -147,18 +162,18 @@ class Problem {
         
         const title = document.getElementById("problemTitle").value
         const description = document.getElementById("problemDescription").value
+        const userId = localStorage.userId
 
         event.target.reset()
-        // document.getElementById("problemTitle").value = ""
-        // document.getElementById("problemDescription").value = ""
         
         const obj = {
             method: "POST",
+            credentials: "same-origin",
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            body: JSON.stringify({problem: {title: title, description: description}})
+            body: JSON.stringify({problem: {title: title, description: description, user_id: userId}})
         }
         
         fetch("http://localhost:3000/problems", obj)

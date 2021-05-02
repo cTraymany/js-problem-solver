@@ -1,0 +1,50 @@
+.signup-page .auth-container .right {
+    width: 575px;
+    float: right;
+    /* margin: 175px 62px 173px 82px; */
+    margin: 116px 62px 116px 82px;
+}
+
+.signup-page .auth-container .right h2 {
+    width: 300px;
+    margin: 0 80px;
+}
+
+.signup-page .auth-container .right h3 {
+    width: 400px;
+    margin: 0 96px;
+}
+
+#signup-page-button {
+    border: none;
+    background: #F78844;
+    padding: 8px 38px;
+    color: #FEFEFE;
+    border-radius: 2px;
+    font-family: "nunito";
+    font-weight: bold;
+    /* letter-spacing: -0.0127em; */
+
+    margin-top: 20px;
+}
+
+#signup-page-button:hover {
+    cursor: pointer;
+}
+
+form#signup-form > label {
+    width: 30px;
+    height: 14px;
+    
+    font-family: "Roboto";
+    font-size: 12px;
+    line-height: 14px;    
+    letter-spacing: -0.0127em;
+    
+    color: #282828;
+}
+
+form#signup-form > input[type="text"], form#signup-form > input[type="password"] {
+    width: 431px;
+    height: 40px;
+}

@@ -28,6 +28,6 @@ class ProblemsController < ApplicationController
     private
 
     def problem_params
-        params.require(:problem).permit(:title, :description)
+        params.require(:problem).permit(:title, :description, :user_id)
     end
 end

@@ -3,6 +3,7 @@ class CreateProblems < ActiveRecord::Migration[6.0]
     create_table :problems do |t|
       t.string :title
       t.string :description
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end

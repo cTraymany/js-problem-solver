@@ -15,9 +15,9 @@ body {
     font-family: var(--primary-font);
     font-style: normal;
     background-color: var(--light-background-color);
-    /* width: 1440px; */
-    height: 2182px;
-    /* height: 100%; */
+    width: 1440px;
+    /* height: 2182px; */
+    height: 100%;
     margin-bottom: 89px;
 }
 
@@ -43,7 +43,7 @@ a {
     color: #FEFEFE;
 }
 
-.nav-button {
+.bordered-button {
     border-style: solid;
     border-color: #FEFEFE;
     padding: 5px 50px;
@@ -51,7 +51,7 @@ a {
     border-width: 1.5px;
 }
 
-.desktop-nav {
+#desktop-nav {
     position: relative;
     margin: 0 auto;
     padding: 26px 100px;
@@ -63,20 +63,24 @@ a {
     z-index: 1;
 }
 
-.desktop-nav .menu-items {
+/* desktop-nav */
+.menu-items {
     display: flex;
     list-style: none;
 }
 
-.desktop-nav .menu-items li {
+/* desktop-nav */
+.menu-items li {
     margin: 0 25px;
 }
 
-.desktop-nav .menu-items li:nth-child(2) {
+/* desktop-nav */
+.menu-items li:nth-child(2) {
     margin-top: -6px;
 }
 
-.desktop-nav .menu-items li a {
+/* desktop-nav */
+.menu-items li a {
     color: #FEFEFE;
 
     font-size: 1.125rem;
@@ -270,7 +274,7 @@ a {
     height: 234px;
 
     top: 1859px;
-    margin-bottom: 89px;
+    padding-bottom: 89px;
 
     background: var(--medium-background-color)
     
