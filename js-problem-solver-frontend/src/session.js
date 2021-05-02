@@ -122,7 +122,6 @@ function loadLoginPage() {
     
             const jsObj = {
                 method: "POST",
-                credentials: "same-origin",
                 headers: {
                   "Content-Type": "application/json",
                   "Accept": "application/json"
@@ -148,13 +147,13 @@ function loadLoginPage() {
                         // ^^what is this variable set for???
                         // add welcome message to display user information.
                     } else {
-                        console.log(error)
+                        console.log(jsObj.error)
                         alert("Please enter a valid login.")
                         // change alert to render something prettier
     
                     }
                 })
-                .catch( error => {
+                .catch(error => {
                     console.log(error)
                     alert("Please enter a valid login.")
                 })
@@ -213,7 +212,6 @@ function loadSignupPage() {
     
             const jsObj = {
                 method: "POST",
-                credentials: "same-origin",
                 headers: {
                   "Content-Type": "application/json",
                   "Accept": "application/json"
