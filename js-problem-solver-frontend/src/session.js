@@ -5,7 +5,7 @@ function loadLandingPage() {
     container.innerHTML = `
         <header class="hero-container">
             <div class="right">
-                <h2>We all have problems. Let us solve yours!</h2>
+                <h2>We all have problems.<br>Let us solve yours!</h2>
                 <a class="btn" id="get-started" href=#>Get Started</a>
             </div>
             <img src="./img/pexels-nathan-cowley-897817.png">
