@@ -8,7 +8,7 @@
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Nunito:wght@400;700&family=Oswald:wght@300;400;700&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="styles/main.css"> -->
+	<link rel="stylesheet" href="styles/main.css">
 	<!-- <link rel="stylesheet" href="styles/login.css"> -->
 	<!-- <link rel="stylesheet" href="styles/signup.css"> -->
 </head>
@@ -16,84 +16,84 @@
 <body>
 	<div class="wrapper">
 	<!-- start of desktop nav -->
-    	<nav id="desktop-nav">
-    		<div id="logo" class="logo">
-				<a href=#>
-					<h1>Problem Solver</h1>
-				</a>
-			</div>
-			<ul class="menu-items">
-				<li id="login-button" class="active">
-					<a href=#>Sign In</a>
-				</li>
-				<li id="signup-button" class="active bordered-button">
-					<a href=#>Sign Up</a>
-				</li>
-				<li id="logout-button" class="inactive">
-					<a href=#>Logout</a>
-				</li>
-			</ul>
-    	</nav>
-	<!-- end of desktop nav -->
-		<div id="container">
-			<header class="hero-container">
-				<div class="right">
-					<h2>We all have problems.<br>Let us solve yours!</h2>
-					<a class="btn" id="get-started" href=#>Get Started</a>
-				</div>
-				<img src="./img/pexels-nathan-cowley-897817.png">
-			</header>
-			<!-- end of hero section -->
-			<section class="selling-points-container">
-				<h3>We're here to get you there</h3>
-				<ul class="selling-points">
-					<li>
-						<h4>Easy to use</h4>
-						<p>Solving problems  has<br>never been so easy. Get started in minutes!</p>
-						<div class="line"></div>
-					</li>
-					<li>
-						<h4>You're protected</h4>
-						<p>All problems are<br>anonymous to ensure complete privacy.</p>
-						<div class="line"></div>
-					</li>
-					<li>
-						<h4>Try for free</h4>
-						<p>Solve your first problem for free, there are no hidden fees. Yes—we’re serious.</p>
-					</li>
+		<section class="desktop-nav">
+			<nav class="container">
+				<h1 class="nav__logo">Problem Solver</h1>
+				<ul class="nav__menu">
+					<li id="login-button" class="nav__item active">Sign In</li>
+					<li id="signup-button" class="nav__item nav__item--border active">Sign Up</li>
+					<li id="logout-button" class="nav__item inactive">Logout</li>
 				</ul>
+    		</nav>
+		</section>
+		<!-- end of desktop nav -->
+		<article id="page">
+			<section class="hero">
+				<header class="container">
+					<div class="hero__right">
+						<h2 class="hero__heading">We all have problems. Let us solve yours!</h2>
+						<button class="hero__btn btn" id="get-started">Get Started</button>
+					</div>
+					<img class="hero__img" src="./img/pexels-nathan-cowley-897817.png">
+				</header>
 			</section>
-			<section class="testimonials-container">
-				<h3>See what people are saying about us</h3>
-				<ul class="testimonials">
-					<li>
-						<img src="img/pexels-háº£i-nguyá»_n-5321674.png">
-						<div>
-							<h5>Cindy S</h5>
-							<p>“Yooooo... I had a problem and now it’s solved.”</p>
-						</div>
-					</li>
-					<li>
-						<img src="img/eduardo-dutra-614571-unsplash.png">
-						<div>
-							<h5>Rahim H</h5>
-							<p>“Wow. I’m rich now! Are you serious bro? Problem Solver rocks!!”</p>
-						</div>
-					</li>
-					<li>
-						<img src="img/jan-abellan-Vf6Voxf-q80-unsplash.png">
-						<div>
-							<h5>John A</h5>
-							<p>“That war never happened. Thank you.”</p>
-						</div>
-					</li>
-				</ul>
+			<!-- end of hero section -->
+			<section class="selling-points">
+				<div class="container">
+					<h3 class="selling-points__heading">We're here to get you there</h3>
+					<ul class="selling-points__menu">
+						<li class="selling-points__item">
+							<h4 class="selling-points__title">Easy to use</h4>
+							<p class="selling-points__description">Solving problems  has<br>never been so easy. Get started in minutes!</p>
+							<div class="selling-points__line"></div>
+						</li>
+						<li class="selling-points__item">
+							<h4 class="selling-points__title">You're protected</h4>
+							<p class="selling-points__description">All problems are<br>anonymous to ensure complete privacy.</p>
+							<div class="line"></div>
+						</li>
+						<li class="selling-points__item">
+							<h4 class="selling-points__title">Try for free</h4>
+							<p class="selling-points__description">Solve your first problem for free, there are no hidden fees. Yes—we’re serious.</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="testimonials">
+				<div class="container">
+					<h3 class="testimonials__heading">See what people are saying about us</h3>
+					<ul class="testimonials__menu">
+						<li class="testimonials__item">
+							<img class="testimonials__img" src="img/pexels-háº£i-nguyá»_n-5321674.png">
+							<div class="testimonials__container">
+								<h5 class="testimonials__name">Cindy S</h5>
+								<p class="testimonials__description">“Yooooo... I had a problem and now it’s solved.”</p>
+							</div>
+						</li>
+						<li class="testimonials__item">
+							<img class="testimonials__img" src="img/eduardo-dutra-614571-unsplash.png">
+							<div class="testimonials__container">
+								<h5 class="testimonials__name">Rahim H</h5>
+							<p class="testimonials__description">“Wow. I’m rich now! Are you serious bro? Problem Solver rocks!!”</p>
+							</div>
+						</li>
+						<li class="testimonials__item">
+							<img class="testimonials__img" src="img/jan-abellan-Vf6Voxf-q80-unsplash.png">
+							<div class="testimonials__container">
+								<h5 class="testimonials__name">John A</h5>
+								<p class="testimonials__description">“That war never happened. Thank you.”</p>
+							</div>
+						</li>
+					</ul>
+				</div>
 			</section>
 			<section class="call-to-action">
-				<h3>Let's do this.</h3>
-				<a class="btn" id="solve-a-problem" href=#>Solve a problem</a>
+				<div class="container">
+					<h3 class="call-to-action__heading">Let's do this.</h3>
+					<button class="call-to-action__btn btn" id="solve-a-problem">Solve a problem</button>
+				</div>
 			</section>
-		</div>
+		</article>
 	</div>
 
 	<script type="text/javascript" src="src/problem.js"></script>
