@@ -17,6 +17,10 @@ Fork and clone this repository onto your terminal.
     <!-- CD into frontend -->
     $ open index.html
 
+    Log in with the provided dummy data:
+    email: Google@gmail.com
+    password: GoogleLove
+
 ### Built With
 [VS Code](https://code.visualstudio.com/) - text editor
 
