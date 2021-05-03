@@ -3,63 +3,7 @@ function loadLandingPage() {
     nav.classList.remove("auth-page-nav")
 
     container.innerHTML = `
-        <header class="hero-container">
-            <div class="right">
-                <h2>We all have problems.<br>Let us solve yours!</h2>
-                <a class="btn" id="get-started" href=#>Get Started</a>
-            </div>
-            <img src="./img/pexels-nathan-cowley-897817.png">
-        </header>
-        <!-- end of hero section -->
-        <section class="selling-points-container">
-            <h3>We're here to get you there</h3>
-            <ul class="selling-points">
-                <li>
-                    <h4>Easy to use</h4>
-                    <p>Solving problems  has<br>never been so easy. Get started in minutes!</p>
-                    <div class="line"></div>
-                </li>
-                <li>
-                    <h4>You're protected</h4>
-                    <p>All problems are<br>anonymous to ensure complete privacy.</p>
-                    <div class="line"></div>
-                </li>
-                <li>
-                    <h4>Try for free</h4>
-                    <p>Solve your first problem for free, there are no hidden fees. Yes—we’re serious.</p>
-                </li>
-            </ul>
-        </section>
-        <section class="testimonials-container">
-            <h3>See what people are saying about us</h3>
-            <ul class="testimonials">
-                <li>
-                    <img src="img/pexels-háº£i-nguyá»_n-5321674.png">
-                    <div>
-                        <h5>Cindy S</h5>
-                        <p>“Yooooo... I had a problem and now it’s solved.”</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="img/eduardo-dutra-614571-unsplash.png">
-                    <div>
-                        <h5>Rahim H</h5>
-                        <p>“Wow. I’m rich now! Are you serious bro? Problem Solver rocks!!”</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="img/jan-abellan-Vf6Voxf-q80-unsplash.png">
-                    <div>
-                        <h5>John A</h5>
-                        <p>“That war never happened. Thank you.”</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <section class="call-to-action">
-            <h3>Let's do this.</h3>
-            <a class="btn" id="solve-a-problem" href=#>Solve a problem</a>
-        </section>
+        
     `
     const loginButton = document.getElementById("login-button")
     const signupButton = document.getElementById("signup-button")
@@ -77,7 +21,36 @@ function loadLandingPage() {
 
 function loadLoginPage() {
         container.innerHTML = `
-            
+            <article class="signin-page">
+				<div class="auth-container">
+					<div class="left">
+						<div class="blue-rectangle"></div>
+						<img id="auth-img" src="./img/auth-design.png">
+					</div>
+					<div class="right">
+						<h2>Welcome back</h2>
+						<h3>Sign in</h3>
+						<form id="login-form">
+							<label>Email</label><br>
+							<input type="text" name="email" id="login-email"></input><br>
+							<label>Password</label><br>
+							<input type="password" name="password" id="login-password"></input><br>
+							<div class="checkbox-container inactive">
+								<div class="checkbox"></div>
+								<p>Keep me logged in</p>
+							</div>
+							<input id="signin-page-button" type="submit" value="Sign in"></input>
+						</form>
+					</div>
+				</div>
+				<footer class="inactive">
+					<ul class="fine-print">
+						<li>Terms and conditions</li>
+						<li>Privacy policy</li>
+						<li>Contact us</li>
+					</ul>
+				</footer>
+			</article>
         `
     
         const nav = document.getElementById("desktop-nav")
