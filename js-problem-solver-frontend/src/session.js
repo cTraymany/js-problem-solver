@@ -77,36 +77,7 @@ function loadLandingPage() {
 
 function loadLoginPage() {
         container.innerHTML = `
-            <article class="signin-page">
-				<div class="auth-container">
-					<div class="left">
-						<div class="blue-rectangle"></div>
-						<img id="auth-img" src="./img/auth-design.png">
-					</div>
-					<div class="right">
-						<h2>Welcome back</h2>
-						<h3>Sign in</h3>
-						<form id="login-form">
-							<label>Email</label><br>
-							<input type="text" name="email" id="login-email"></input><br>
-							<label>Password</label><br>
-							<input type="password" name="password" id="login-password"></input><br>
-							<div class="checkbox-container inactive">
-								<div class="checkbox"></div>
-								<p>Keep me logged in</p>
-							</div>
-							<input id="signin-page-button" type="submit" value="Sign in"></input>
-						</form>
-					</div>
-				</div>
-				<footer class="inactive">
-					<ul class="fine-print">
-						<li>Terms and conditions</li>
-						<li>Privacy policy</li>
-						<li>Contact us</li>
-					</ul>
-				</footer>
-			</article>
+            
         `
     
         const nav = document.getElementById("desktop-nav")
