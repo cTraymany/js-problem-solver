@@ -123,8 +123,11 @@ function loadLoginPage() {
             const jsObj = {
                 method: "POST",
                 headers: {
-                  "Content-Type": "application/json",
-                  "Accept": "application/json"
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                    "Access-Control-Allow-Origin": "*"
+                    // todo: change wildcard to link of site hosting frontend
+                    // this allows us to send from any origin
                 },
                 body: JSON.stringify({user: {email: email, password: password}})
               }
