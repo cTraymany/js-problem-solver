@@ -16,14 +16,10 @@ body {
     font-style: normal;
     background-color: var(--light-background-color);
     /* width: 1440px; */
-    width: 100vw;
+    /* width: 100vw; */
     /* height: 2182px; */
     height: 100%;
     margin-bottom: 89px;
-}
-
-html {
-    height: 100%;
 }
 
 a {
