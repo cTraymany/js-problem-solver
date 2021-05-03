@@ -15,7 +15,8 @@ body {
     font-family: var(--primary-font);
     font-style: normal;
     background-color: var(--light-background-color);
-    width: 1440px;
+    /* width: 1440px; */
+    width: 100vw;
     /* height: 2182px; */
     height: 100%;
     margin-bottom: 89px;
@@ -52,9 +53,11 @@ a {
 }
 
 #desktop-nav {
-    position: relative;
-    margin: 0 auto;
+    position: absolute;
+    /* width: 100vw; */
+    width: 1440px;
     padding: 26px 100px;
+    /* padding: 2% 8%; */
 
     display: flex;
     justify-content: space-between;
@@ -88,16 +91,24 @@ a {
 }
 
 .hero-container {
+    /* position: relative; */
     position: absolute;
-    height: 651px;
     left: 0px;
     top: 0px;
+    /* width: 100vw; */
+    width: 1440px;
+    height: 651px;
+
 
     background-color: rgba(16, 14, 10);
 }
 
 .hero-container img {
     opacity: 58%;
+    /* width: 100vw; */
+    width: 1440px;
+    left: 0px;
+    top: 0px;
 }
 
 .hero-container .right {
@@ -111,10 +122,12 @@ a {
     position: absolute;
     width: 568px;
     height: 157px;
-    left: 730px;
+    /* left: 730px; */
     top: 239px;
+    right: 132px;
 
     font-weight: bold;
+    /* font-size: 4vw; */
     font-size: 4rem;
     line-height: 1.125;
 }
@@ -141,12 +154,11 @@ a {
 }
 
 .selling-points-container {
+    /* align-items: center; */
     position: absolute;
     height: 425px;
+    /* width: 100vw; */
     width: 1440px;
-    /* width: 100%; */
-    /* width: min(90%, 100%); */
-
 
     top: 728px;
 
@@ -172,6 +184,7 @@ a {
     list-style: none;
     display: flex;
     top: 180px;
+    /* justify-content: space-between; */
 }
 
 .selling-points li {
@@ -215,6 +228,7 @@ a {
 .testimonials-container {
     position: absolute;
     width: 1440px;
+    /* width: 100vw; */
     height: 519px;
 
     top: 1240px;
@@ -238,6 +252,7 @@ a {
 .testimonials li {
     display: flex;
     margin-top: 39px;
+    /* justify-content: space-between; */
 }
 
 .testimonials li:nth-child(2) {
@@ -271,6 +286,7 @@ a {
 .call-to-action {
     position: absolute;
     width: 1440px;
+    /* width: 100vw; */
     height: 234px;
 
     top: 1859px;
@@ -286,6 +302,7 @@ a {
     font-size: 3rem;
     line-height: 1.25;
     width: 1440px;
+    /* width: 100vw; */
     top: 49px;
 
     text-align: center;
@@ -308,7 +325,7 @@ a {
     line-height: 1.5;
 }
 
-.wrapper {
+/* .wrapper { */
     /* margin-inline: auto; */
-    width: min(90%, 70.5rem);
-}
+    /* width: min(90%, 70.5rem); */
+/* } */
