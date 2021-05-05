@@ -27,5 +27,5 @@ Solution.create(content: "Google the proper way to care for individual plants", 
 Solution.create(content: "Buy a ton of plants so no one notices the dead ones", problem_id: 2, user_id: 1)
 
 Problem.create(title: "My Sock is Falling", description: "My sock keeps falling inside of my shoe", user_id: 3)
-Solution.create(content: "Sock suspenders", problem_id: 2, user_id: 1)
-Solution.create(content: "Buy new socks", problem_id: 2, user_id: 1)
+Solution.create(content: "Sock suspenders", problem_id: 3, user_id: 1)
+Solution.create(content: "Buy new socks", problem_id: 3, user_id: 1)
