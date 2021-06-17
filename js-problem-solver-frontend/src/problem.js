@@ -99,6 +99,7 @@ class Problem {
             container.innerHTML = ""
             
             App.start()
+            // todo: if !location.reload
             // separate method in app so that problems don't render twice
         })
 
@@ -114,7 +115,7 @@ class Problem {
         })
         
         container.append(problemH3, problemP, answers, ul, back, delButton)
-        // container.append(home)
+        // todo: container.append(home)
         
         this.solutions.forEach(solution => {
             const showSolution = document.createElement("li")

@@ -124,8 +124,10 @@ function loadLoginPage() {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "Accept": "application/json",
-                    "Access-Control-Allow-Origin": "*"
+                    "Accept": "application/json"
+                    // Authorization: Bearer <token>
+
+                    // "Access-Control-Allow-Origin": "*"
                     // todo: change wildcard to link of site hosting frontend
                     // this allows us to send from any origin
                 },
@@ -138,21 +140,23 @@ function loadLoginPage() {
                     console.log(jsObj)
                     if (jsObj.logged_in) {
                         sessionStorage.setItem("username", jsObj.session.username)
-                        sessionStorage.setItem("userId", jsObj.session.id)
-                        sessionStorage.setItem("loggedIn", true)
+                        // sessionStorage.setItem("userId", jsObj.session.id)
+                        // sessionStorage.setItem("loggedIn", true)
+                        sessionStorage.setItem("token", jsObj.session.token)
+
                         console.log(sessionStorage)
     
                         container.innerHTML = ""
     
                         Problem.start()
-                        // ^^ONCE LOGGED IN, LOAD THE WELCOME SCREEN INSTEAD OF NAVIGATING TO PROBLEMS RIGHT AWAY
+                        // todo: ^^ONCE LOGGED IN, LOAD THE WELCOME SCREEN INSTEAD OF NAVIGATING TO PROBLEMS RIGHT AWAY
                         // const userId = jsObj.session.id
                         // ^^what is this variable set for???
                         // add welcome message to display user information.
                     } else {
                         console.log(jsObj.error)
                         alert("Please enter a valid login.")
-                        // change alert to render something prettier
+                        // todo: change alert to render something prettier
     
                     }
                 })
@@ -235,7 +239,7 @@ function loadSignupPage() {
                     container.innerHTML = ""
                     
                     Problem.start()
-                    // ^^ONCE LOGGED IN, LOAD THE WELCOME SCREEN INSTEAD OF NAVIGATING TO PROBLEMS RIGHT AWAY
+                    // todo: ^^ONCE LOGGED IN, LOAD THE WELCOME SCREEN INSTEAD OF NAVIGATING TO PROBLEMS RIGHT AWAY
                     // add welcome message to display user information.
                 } else {
                     console.log(error)
