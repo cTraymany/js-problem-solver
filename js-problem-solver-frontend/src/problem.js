@@ -162,7 +162,7 @@ class Problem {
         
         const title = document.getElementById("problemTitle").value
         const description = document.getElementById("problemDescription").value
-        const userId = localStorage.userId
+        const userId = sessionStorage.userId
 
         event.target.reset()
         

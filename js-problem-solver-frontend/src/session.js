@@ -135,10 +135,10 @@ function loadLoginPage() {
                 .then(jsObj => {
                     console.log(jsObj)
                     if (jsObj.logged_in) {
-                        localStorage.setItem("username", jsObj.session.username)
-                        localStorage.setItem("userId", jsObj.session.id)
-                        localStorage.setItem("loggedIn", true)
-                        console.log(localStorage)
+                        sessionStorage.setItem("username", jsObj.session.username)
+                        sessionStorage.setItem("userId", jsObj.session.id)
+                        sessionStorage.setItem("loggedIn", true)
+                        console.log(sessionStorage)
     
                         container.innerHTML = ""
     
@@ -226,10 +226,10 @@ function loadSignupPage() {
             .then(jsObj => {
                 console.log(jsObj)
                 if (jsObj.logged_in) {
-                    localStorage.setItem("username", jsObj.session.data.attributes.username)
-                    localStorage.setItem("userId", jsObj.session.data.id)
-                    localStorage.setItem("loggedIn", true)
-                    console.log(localStorage)
+                    sessionStorage.setItem("username", jsObj.session.data.attributes.username)
+                    sessionStorage.setItem("userId", jsObj.session.data.id)
+                    sessionStorage.setItem("loggedIn", true)
+                    console.log(sessionStorage)
                     
                     container.innerHTML = ""
                     
@@ -261,7 +261,7 @@ function logout() {
     
     fetch("http://localhost:3000/logout", obj)
 
-    localStorage.clear()
+    sessionStorage.clear()
     location.reload()
     
     logoutButton.classList.add("inactive")
