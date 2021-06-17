@@ -30,8 +30,8 @@ class Solution {
         event.preventDefault()
         const content = document.getElementById("solutionContent").value
         const problemId = this.id
-        const userId = localStorage.userId
-        console.log(localStorage)
+        const userId = sessionStorage.userId
+        console.log(sessionStorage)
 
         document.getElementById("solutionContent").value = ""
 

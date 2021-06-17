@@ -1,4 +1,4 @@
-if (localStorage.loggedIn) {
+if (sessionStorage.loggedIn) {
     Problem.start()
 } else {
     loadLandingPage()
@@ -10,7 +10,7 @@ logo.addEventListener("click", event => {
     event.preventDefault()
     document.body.style.background = ""
 
-    if (localStorage.loggedIn) {
+    if (sessionStorage.loggedIn) {
         document.body.style.background = "pink"
         console.log("load the welcome page!")
     } else {
@@ -18,9 +18,9 @@ logo.addEventListener("click", event => {
     }
 })
 
-// window.addEventListener("load", event => localStorage.setItem("fetched", false))
+// window.addEventListener("load", event => sessionStorage.setItem("fetched", false))
 
 // if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
-//     localStorage.setItem("fetched", false)
-//     console.log(localStorage.fetched)
+//     sessionStorage.setItem("fetched", false)
+//     console.log(sessionStorage.fetched)
 // }
