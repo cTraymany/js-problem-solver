@@ -24,10 +24,10 @@ module JsProblemSolverBackend
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
-    # Here, we turn off forgery protection origin check so we can make
+    # todo: Below, we turn off forgery protection origin check so we can make
     # post requests from a local file instead of a domain.
     # Remove this line of code before deploying.
-    config.action_controller.forgery_protection_origin_check = false
+    # config.action_controller.forgery_protection_origin_check = false
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
