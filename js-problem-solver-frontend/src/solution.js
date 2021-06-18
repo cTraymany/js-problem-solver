@@ -37,7 +37,6 @@ class Solution {
 
         const obj = {
             method: "POST",
-            credentials: "same-origin",
             headers: {
               "Content-Type": "application/json",
               "Accept": "application/json"

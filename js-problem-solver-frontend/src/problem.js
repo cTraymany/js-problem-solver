@@ -99,6 +99,7 @@ class Problem {
             container.innerHTML = ""
             
             App.start()
+            // todo: if !location.reload
             // separate method in app so that problems don't render twice
         })
 
@@ -114,7 +115,7 @@ class Problem {
         })
         
         container.append(problemH3, problemP, answers, ul, back, delButton)
-        // container.append(home)
+        // todo: container.append(home)
         
         this.solutions.forEach(solution => {
             const showSolution = document.createElement("li")
@@ -171,7 +172,8 @@ class Problem {
             credentials: "same-origin",
             headers: {
                 "Content-Type": "application/json",
-                "Accept": "application/json"
+                "Accept": "application/json",
+                "Authorization": `Bearer ${sessionStorage.token}`
             },
             body: JSON.stringify({problem: {title: title, description: description, user_id: userId}})
         }
@@ -183,7 +185,8 @@ class Problem {
             newProblem.renderProblem()
         })
         .catch(error => {
-            alert("Please enter a valid title and description.")
+            console.log(error)
+            alert(error)
         })
     }
     
@@ -203,11 +206,12 @@ class Problem {
         const obj = {
             method: "DELETE",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${sessionStorage.token}`
             },
-            body: JSON.stringify({id: `${this.id}`})
+            body: JSON.stringify({id: `${this.id}`, user_id: `${this.userId}`})
         }
-        
+
         fetch(`http://localhost:3000/problems/${this.id}`, obj)
 
         container.innerHTML = ""
