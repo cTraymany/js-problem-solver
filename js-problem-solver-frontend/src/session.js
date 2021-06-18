@@ -125,23 +125,22 @@ function loadLoginPage() {
                 headers: {
                     "Content-Type": "application/json",
                     "Accept": "application/json"
-                    // Authorization: Bearer <token>
-
                     // "Access-Control-Allow-Origin": "*"
                     // todo: change wildcard to link of site hosting frontend
                     // this allows us to send from any origin
                 },
                 body: JSON.stringify({user: {email: email, password: password}})
               }
-    
+              
+            // debugger
             fetch("http://localhost:3000/login", jsObj)
                 .then(resp => resp.json())
                 .then(jsObj => {
                     console.log(jsObj)
                     if (jsObj.logged_in) {
                         sessionStorage.setItem("username", jsObj.session.username)
-                        // sessionStorage.setItem("userId", jsObj.session.id)
-                        // sessionStorage.setItem("loggedIn", true)
+                        sessionStorage.setItem("userId", jsObj.session.user_id)
+                        sessionStorage.setItem("loggedIn", true)
                         sessionStorage.setItem("token", jsObj.session.token)
 
                         console.log(sessionStorage)

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # todo: clean up routes
   resources :solutions
   resources :problems
   resources :users
