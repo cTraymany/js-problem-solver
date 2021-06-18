@@ -1,6 +1,6 @@
 class ProblemsController < ApplicationController
     include ActionController::HttpAuthentication::Token
-    before_action :authenticate_user, only: [:create, :destroy]
+    before_action :authenticate_user, only: [:create]#, :destroy]
 
     def index
         render json: ProblemSerializer.new(Problem.all)
@@ -25,7 +25,8 @@ class ProblemsController < ApplicationController
     def destroy
         if problem = Problem.find(params[:id])
             # binding.pry
-            problem.destroy if session[:user_id] === problem.user_id
+            # problem.destroy if session[:user_id] === problem.user_id
+            problem.destroy
         else
             render json: {message: "Error! Try again."}
         end
