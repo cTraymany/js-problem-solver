@@ -8,10 +8,11 @@ const logo = document.getElementById("logo")
 
 logo.addEventListener("click", event => {
     event.preventDefault()
-    document.body.style.background = ""
+    // document.body.style.background = ""
 
     if (sessionStorage.loggedIn) {
-        document.body.style.background = "pink"
+        // todo:
+        // document.body.style.background = "pink"
         console.log("load the welcome page!")
     } else {
         loadLandingPage()

@@ -1,0 +1,12 @@
+{
+  "name": "js-problem-solver-frontend",
+  "version": "1.0.0",
+  "description": "Problem Solver frontend",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "open index.html"
+  },
+  "author": "Chindalath Traymany",
+  "license": "ISC"
+}

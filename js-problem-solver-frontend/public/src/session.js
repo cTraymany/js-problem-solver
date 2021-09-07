@@ -8,7 +8,7 @@ function loadLandingPage() {
                 <h2>We all have problems. Let us solve yours!</h2>
                 <a class="btn" id="get-started" href=#>Get Started</a>
             </div>
-            <img src="./img/pexels-nathan-cowley-897817.png">
+            <img src="./public/img/pexels-nathan-cowley-897817.png">
         </header>
         <!-- end of hero section -->
         <section class="selling-points-container">
@@ -34,21 +34,21 @@ function loadLandingPage() {
             <h3>See what people are saying about us</h3>
             <ul class="testimonials">
                 <li>
-                    <img src="img/pexels-háº£i-nguyá»_n-5321674.png">
+                    <img src="public/img/pexels-háº£i-nguyá»_n-5321674.png">
                     <div>
                         <h5>Cindy S</h5>
                         <p>“Yooooo... I had a problem and now it’s solved.”</p>
                     </div>
                 </li>
                 <li>
-                    <img src="img/eduardo-dutra-614571-unsplash.png">
+                    <img src="public/img/eduardo-dutra-614571-unsplash.png">
                     <div>
                         <h5>Rahim H</h5>
                         <p>“Wow. I’m rich now! Are you serious bro? Problem Solver rocks!!”</p>
                     </div>
                 </li>
                 <li>
-                    <img src="img/jan-abellan-Vf6Voxf-q80-unsplash.png">
+                    <img src="public/img/jan-abellan-Vf6Voxf-q80-unsplash.png">
                     <div>
                         <h5>John A</h5>
                         <p>“That war never happened. Thank you.”</p>
@@ -81,16 +81,16 @@ function loadLoginPage() {
 				<div class="auth-container">
 					<div class="left">
 						<div class="blue-rectangle"></div>
-						<img id="auth-img" src="./img/auth-design.png">
+						<img id="auth-img" src="./public/img/auth-design.png">
 					</div>
 					<div class="right">
 						<h2>Welcome back</h2>
 						<h3>Sign in</h3>
 						<form id="login-form">
 							<label>Email</label><br>
-							<input type="text" name="email" id="login-email"></input><br>
+							<input type="text" name="email" id="login-email" value="Google@gmail.com"></input><br>
 							<label>Password</label><br>
-							<input type="password" name="password" id="login-password"></input><br>
+							<input type="password" name="password" id="login-password" value="GoogleLove"></input><br>
 							<div class="checkbox-container inactive">
 								<div class="checkbox"></div>
 								<p>Keep me logged in</p>
@@ -172,7 +172,7 @@ function loadSignupPage() {
                 <div class="auth-container">
                     <div class="left">
                         <div class="blue-rectangle"></div>
-                        <img id="auth-img" src="./img/auth-design.png">
+                        <img id="auth-img" src="./public/img/auth-design.png">
                     </div>
                     <div class="right">
                         <h2>Welcome to Problem Solver</h2>
