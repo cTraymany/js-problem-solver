@@ -169,11 +169,9 @@ class Problem {
         
         const obj = {
             method: "POST",
-            credentials: "same-origin",
             headers: {
                 "Content-Type": "application/json",
-                "Accept": "application/json",
-                "Authorization": `Bearer ${sessionStorage.token}`
+                "Accept": "application/json"
             },
             body: JSON.stringify({problem: {title: title, description: description, user_id: userId}})
         }
@@ -181,6 +179,7 @@ class Problem {
         fetch("https://problem-solver-api.herokuapp.com/problems", obj)
         .then(response => response.json())
         .then(jsObj => {
+            console.log("jsobj: ", jsObj)
             let newProblem = new Problem(jsObj.data)
             newProblem.renderProblem()
         })
@@ -206,9 +205,7 @@ class Problem {
         const obj = {
             method: "DELETE",
             headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${sessionStorage.token}`
-            },
+                "Content-Type": "application/json"            },
             body: JSON.stringify({id: `${this.id}`, user_id: `${this.userId}`})
         }
 
