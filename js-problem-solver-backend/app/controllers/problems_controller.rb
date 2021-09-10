@@ -1,6 +1,6 @@
 class ProblemsController < ApplicationController
     include ActionController::HttpAuthentication::Token
-    before_action :authenticate_user, only: [:create]#, :destroy]
+    # before_action :authenticate_user, only: [:create]#, :destroy]
 
     def index
         render json: ProblemSerializer.new(Problem.all)

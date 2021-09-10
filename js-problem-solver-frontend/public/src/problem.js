@@ -172,6 +172,7 @@ class Problem {
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
+                // "Authorization": `Bearer ${sessionStorage.token}`
             },
             body: JSON.stringify({problem: {title: title, description: description, user_id: userId}})
         }
@@ -205,7 +206,9 @@ class Problem {
         const obj = {
             method: "DELETE",
             headers: {
-                "Content-Type": "application/json"            },
+                "Content-Type": "application/json"
+                // "Authorization": `Bearer ${sessionStorage.token}`
+            },
             body: JSON.stringify({id: `${this.id}`, user_id: `${this.userId}`})
         }
 
