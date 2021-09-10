@@ -8,9 +8,9 @@
 /.bundle
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
-/db/*.sqlite3-*
+/db/*.postgres
+/db/*.postgres-journal
+/db/*.postgres-*
 
 # Ignore all logfiles and tempfiles.
 /log/*
