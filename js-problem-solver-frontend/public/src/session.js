@@ -133,7 +133,7 @@ function loadLoginPage() {
               }
               
             // debugger
-            fetch("http://localhost:3000/login", jsObj)
+            fetch("https://problem-solver-api.herokuapp.com/login", jsObj)
                 .then(resp => resp.json())
                 .then(jsObj => {
                     console.log(jsObj)
@@ -225,7 +225,7 @@ function loadSignupPage() {
                 body: JSON.stringify({user: {username: username, email: email, password: password}})
             }
     
-            fetch("http://localhost:3000/signup", jsObj)
+            fetch("https://problem-solver-api.herokuapp.com/signup", jsObj)
             .then(resp => resp.json())
             .then(jsObj => {
                 console.log(jsObj)
@@ -263,7 +263,7 @@ function logout() {
         }
     }
     
-    fetch("http://localhost:3000/logout", obj)
+    fetch("https://problem-solver-api.herokuapp.com/logout", obj)
 
     sessionStorage.clear()
     location.reload()

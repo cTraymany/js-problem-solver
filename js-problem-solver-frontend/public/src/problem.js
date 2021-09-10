@@ -144,7 +144,7 @@ class Problem {
     }
     
     static fetchProblems() {
-        fetch("http://localhost:3000/problems")
+        fetch("https://problem-solver-api.herokuapp.com/problems")
         .then(resp => resp.json())
         .then(probs => {
                 for (const prob of probs.data) {
@@ -178,7 +178,7 @@ class Problem {
             body: JSON.stringify({problem: {title: title, description: description, user_id: userId}})
         }
         
-        fetch("http://localhost:3000/problems", obj)
+        fetch("https://problem-solver-api.herokuapp.com/problems", obj)
         .then(response => response.json())
         .then(jsObj => {
             let newProblem = new Problem(jsObj.data)
@@ -212,7 +212,7 @@ class Problem {
             body: JSON.stringify({id: `${this.id}`, user_id: `${this.userId}`})
         }
 
-        fetch(`http://localhost:3000/problems/${this.id}`, obj)
+        fetch(`https://problem-solver-api.herokuapp.com/problems/${this.id}`, obj)
 
         container.innerHTML = ""
         

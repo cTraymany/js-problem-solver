@@ -44,7 +44,7 @@ class Solution {
             body: JSON.stringify({solution: {content: content, problem_id: problemId, user_id: userId}})
           }
     
-        fetch("http://localhost:3000/solutions", obj)
+        fetch("https://problem-solver-api.herokuapp.com/solutions", obj)
           .then(resp => resp.json())
           .then(jsObj => {
             const newSolution = new Solution(jsObj.data)
