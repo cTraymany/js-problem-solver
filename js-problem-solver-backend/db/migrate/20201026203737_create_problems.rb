@@ -1,9 +1,9 @@
 class CreateProblems < ActiveRecord::Migration[6.0]
   def change
     create_table :problems do |t|
-      t.string :title
-      t.string :description
-      t.references :user, null: false, foreign_key: true
+      t.text :title
+      t.text :description
+      t.integer :user_id
 
       t.timestamps
     end
