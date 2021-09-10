@@ -1,4 +1,9 @@
 class SolutionsController < ApplicationController
+
+    def index
+        render json: SolutionSerializer.new(Solution.all)
+    end
+
     def create
         solution = Solution.create(solution_params)
 
