@@ -81,7 +81,7 @@ function loadLoginPage() {
 				<div class="auth-container">
 					<div class="left">
 						<div class="blue-rectangle"></div>
-						<img id="auth-img" src="/img/auth-design.png">
+						<img id="auth-img" src="img/auth-design.png">
 					</div>
 					<div class="right">
 						<h2>Welcome back</h2>

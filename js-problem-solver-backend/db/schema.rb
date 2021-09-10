@@ -12,32 +12,29 @@
 
 ActiveRecord::Schema.define(version: 2021_04_21_011052) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "problems", force: :cascade do |t|
-    t.string "title"
-    t.string "description"
-    t.integer "user_id", null: false
+    t.text "title"
+    t.text "description"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_problems_on_user_id"
   end
 
   create_table "solutions", force: :cascade do |t|
-    t.string "content"
-    t.integer "problem_id", null: false
-    t.integer "user_id", null: false
+    t.text "content"
+    t.integer "user_id"
+    t.integer "problem_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["problem_id"], name: "index_solutions_on_problem_id"
-    t.index ["user_id"], name: "index_solutions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "email"
-    t.string "password_digest"
+    t.text "username"
+    t.text "email"
+    t.text "password_digest"
   end
 
-  add_foreign_key "problems", "users"
-  add_foreign_key "solutions", "problems"
-  add_foreign_key "solutions", "users"
 end
