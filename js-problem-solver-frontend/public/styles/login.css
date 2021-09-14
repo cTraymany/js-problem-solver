@@ -1,3 +1,21 @@
+/* The auth-page-nav css selector changes the nav font-color on page change */
+.auth-page-nav .bordered-button {
+    border-color: var(--font-color-black);
+    border-radius: 2px;
+    padding: .8rem 2rem;
+    border-width: 1px;
+}
+
+.auth-page-nav .logo {
+    color: var(--font-color-black);
+}
+
+.auth-page-nav .menu-link {
+    color: black;
+    font-family: "raleway";
+}
+/* ---------------------------- */
+
 .signin-page {
     display: flex;
     justify-content: center;
@@ -23,32 +41,85 @@
 
 .auth__right {
     width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .auth__right p:first-child {
-
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 3.6rem;
 }
 
 .auth__right p:nth-child(2) {
-
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
 }
 
 /* form stuff here */
+#login__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
 
+#login__form > label {
+    font-family: "Roboto";
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
 
-/* auth page nav */
-.auth-page-nav .bordered-button {
-    border-color: var(--font-color-black);
+#login__form > input[type="text"], #login__form > input[type="password"] {
+    width: 43rem;
+    height: 4rem;
+}
+
+#signin-page-button {
+    border: none;
+    background: #F78844;
+    padding: .8rem 3.8rem;
+    color: var(--font-color-white);
     border-radius: 2px;
-    padding: .8rem 2rem;
-    border-width: 1px;
+    font-family: "nunito";
+    font-weight: bold;
+
+    margin-top: 2rem;
+    cursor: pointer;
+    align-self: flex-start;
 }
 
-.auth-page-nav .logo {
-    color: black;
+/* Unused code--hidden components */
+/* .fine-print {
+    padding-top: 44px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
 }
+.fine-print li {
+    margin: 0 44px;
+    padding-bottom: 30px;
+} */
 
-.auth-page-nav .menu-link {
-    color: black;
-    font-family: "raleway";
+/* .checkbox {
+    border: 1px solid #282828;
+    width: 25px;
+    height: 25px;
+    padding-top: 25px;
+    padding-left: 25px;
+    border-radius: 2px;
 }
+.checkbox-container {
+    display: flex;
+    margin-top: 26px;
+}
+.checkbox-container p {
+    padding-left: 10px;
+}
+.login-form .checkbox::after {
+    font-size: 40px;
+    color: "orange";
+}*/
