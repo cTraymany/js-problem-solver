@@ -1,0 +1,15 @@
+#container {
+    font-size: 1.6rem;
+}
+
+#formContainer, #problemsContainer, #solutionForm, #solutionsUl {
+    font-size: 1.6rem;
+}
+
+#formContainer, #solutionForm {
+    margin-top: 10rem;
+}
+
+#problemsContainer, #solutionForm ~ h3 {
+    margin-top: 2rem;
+}
