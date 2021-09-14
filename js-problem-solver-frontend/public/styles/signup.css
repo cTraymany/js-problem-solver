@@ -1,50 +1,30 @@
-.signup-page .auth-container .right {
-    width: 575px;
-    float: right;
-    /* margin: 175px 62px 173px 82px; */
-    margin: 116px 62px 116px 82px;
+#signup__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.signup-page .auth-container .right h2 {
-    width: 300px;
-    margin: 0 80px;
+#signup__form > label {
+    font-family: "Roboto";
+    font-size: 1.2rem;
+    margin-top: 2rem;
 }
 
-.signup-page .auth-container .right h3 {
-    width: 400px;
-    margin: 0 96px;
+#signup__form > input[type="text"], #signup__form > input[type="password"] {
+    width: 43rem;
+    height: 4rem;
 }
 
-#signup-page-button {
+#session-page-button {
     border: none;
     background: #F78844;
-    padding: 8px 38px;
-    color: #FEFEFE;
+    padding: .8rem 3.8rem;
+    color: var(--font-color-white);
     border-radius: 2px;
     font-family: "nunito";
     font-weight: bold;
-    /* letter-spacing: -0.0127em; */
 
-    margin-top: 20px;
-}
-
-#signup-page-button:hover {
+    margin-top: 2rem;
     cursor: pointer;
-}
-
-form#signup-form > label {
-    width: 30px;
-    height: 14px;
-    
-    font-family: "Roboto";
-    font-size: 12px;
-    line-height: 14px;    
-    letter-spacing: -0.0127em;
-    
-    color: #282828;
-}
-
-form#signup-form > input[type="text"], form#signup-form > input[type="password"] {
-    width: 431px;
-    height: 40px;
+    align-self: flex-start;
 }

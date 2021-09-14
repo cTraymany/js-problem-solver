@@ -79,7 +79,7 @@ function loadLandingPage() {
 
 function loadLoginPage() {
         container.innerHTML = `
-            <article class="signin-page">
+            <article class="session-page">
 				<div class="auth__container">
 					<div class="auth__left">
 						<img class="auth__img" src="img/auth-design.png">
@@ -96,7 +96,7 @@ function loadLoginPage() {
 								<div class="checkbox"></div>
 								<p>Keep me logged in</p>
 							</div>
-							<input id="signin-page-button" type="submit" value="Sign in"></input>
+							<input id="session-page-button" type="submit" value="Sign in"></input>
 						</form>
 					</div>
 				</div>
@@ -169,16 +169,15 @@ function loadLoginPage() {
 
 function loadSignupPage() {
         container.innerHTML = `
-            <article class="signup-page">
-                <div class="auth-container">
-                    <div class="left">
-                        <div class="blue-rectangle"></div>
-                        <img id="auth-img" src="img/auth-design.png">
+            <article class="session-page">
+                <div class="auth__container">
+                    <div class="auth__left">
+                        <img class="auth__img" src="img/auth-design.png">
                     </div>
-                    <div class="right">
-                        <h1>Welcome to Problem Solver</h1>
-                        <h2>Create an account to get started</h2>
-                        <form id="signup-form">
+                    <div class="auth__right">
+                        <p>Welcome to Problem Solver</p>
+                        <p>Create an account to get started</p>
+                        <form id="signup__form">
                             <label>Username</label>
                             <input type="text" name="username" id="signup-username"></input>
                             <label>Email</label>
@@ -191,7 +190,7 @@ function loadSignupPage() {
                                 <div class="checkbox"></div>
                                 <p>Keep me logged in</p>
                             </div>
-                            <input id="signup-page-button" type="submit" value="Sign up"></input>
+                            <input id="session-page-button" type="submit" value="Sign up"></input>
                         </form>
                     </div>
                 </div>
@@ -208,7 +207,7 @@ function loadSignupPage() {
         const nav = document.getElementById("desktop-nav")
         nav.classList.add("auth-page-nav")
     
-        const signupForm = document.getElementById("signup-form")
+        const signupForm = document.getElementById("signup__form")
     
         signupForm.addEventListener("submit", (event) => {
             event.preventDefault()
