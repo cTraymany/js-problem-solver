@@ -80,15 +80,14 @@ function loadLandingPage() {
 function loadLoginPage() {
         container.innerHTML = `
             <article class="signin-page">
-				<div class="auth-container">
-					<div class="left">
-						<div class="blue-rectangle"></div>
-						<img id="auth-img" src="img/auth-design.png">
+				<div class="auth__container">
+					<div class="auth__left">
+						<img class="auth__img" src="img/auth-design.png">
 					</div>
-					<div class="right">
-						<h1>Welcome back</h1>
-						<h2>Sign in</h2>
-						<form id="login-form">
+					<div class="auth__right">
+						<p>Welcome back</p>
+						<p>Sign in</p>
+						<form id="login__form">
 							<label>Email</label>
 							<input type="text" name="email" id="login-email" value="Google@gmail.com"></input>
 							<label>Password</label>
@@ -114,7 +113,7 @@ function loadLoginPage() {
         const nav = document.getElementById("desktop-nav")
         nav.classList.add("auth-page-nav")
     
-        const loginForm = document.getElementById("login-form")
+        const loginForm = document.getElementById("login__form")
     
         loginForm.addEventListener("submit", (event) => {
             event.preventDefault()
