@@ -3,61 +3,63 @@ function loadLandingPage() {
     nav.classList.remove("auth-page-nav")
 
     container.innerHTML = `
-        <header class="hero-container">
-            <div class="right">
-                <h2>We all have problems. Let us solve yours!</h2>
+        <header class="hero__container">
+            <div class="hero__left">
+                &nbsp;
+            </div>
+            <div class="hero__right">
+                <h1 class="heading-primary">We all have problems. Let us solve yours!</h1>
                 <a class="btn" id="get-started" href=#>Get Started</a>
             </div>
-            <img src="img/pexels-nathan-cowley-897817.png">
         </header>
         <!-- end of hero section -->
-        <section class="selling-points-container">
-            <h3>We're here to get you there</h3>
-            <ul class="selling-points">
-                <li>
-                    <h4>Easy to use</h4>
-                    <p>Solving problems  has<br>never been so easy. Get started in minutes!</p>
-                    <div class="line"></div>
+        <section class="selling-points__container">
+            <h2 class="heading-secondary">We're here to get you there</h2>
+            <ul class="selling-points__list">
+                <li class="selling-points__item">
+                    <h3 class="heading-tertiary">Easy to use</h3>
+                    <p>Solving problems  has never been so easy. Get started in minutes!</p>
                 </li>
-                <li>
-                    <h4>You're protected</h4>
-                    <p>All problems are<br>anonymous to ensure complete privacy.</p>
-                    <div class="line"></div>
+                <div class="line">&nbsp;</div>
+                <li class="selling-points__item">
+                    <h3 class="heading-tertiary">You're protected</h3>
+                    <p>All problems are anonymous to ensure complete privacy.</p>
                 </li>
-                <li>
-                    <h4>Try for free</h4>
+                <div class="line">&nbsp;</div>
+                <li class="selling-points__item">
+                    <h3 class="heading-tertiary">Try for free</h3>
                     <p>Solve your first problem for free, there are no hidden fees. Yes—we’re serious.</p>
                 </li>
             </ul>
         </section>
-        <section class="testimonials-container">
-            <h3>See what people are saying about us</h3>
-            <ul class="testimonials">
-                <li>
-                    <img src="img/pexels-5321674.png">
-                    <div>
-                        <h5>Cindy S</h5>
+        <section class="testimonials__container">
+            <h2 class="heading-secondary">See what people are saying about us</h2>
+            <ul class="testimonials__list">
+                <li class="testimonial__item">
+                    <img class="testimonial__img" src="img/pexels-5321674.png">
+                    <div class="testimonial__text">
+                        <p>Cindy S</p>
                         <p>“Yooooo... I had a problem and now it’s solved.”</p>
                     </div>
                 </li>
-                <li>
-                    <img src="img/eduardo-dutra-614571-unsplash.png">
-                    <div>
-                        <h5>Rahim H</h5>
+                <li class="testimonial__item">
+                    <img  class="testimonial__img" src="img/eduardo-dutra-614571-unsplash.png">
+                    <div class="testimonial__text">
+                        <p>Rahim H</p>
                         <p>“Wow. I’m rich now! Are you serious bro? Problem Solver rocks!!”</p>
                     </div>
                 </li>
-                <li>
-                    <img src="img/jan-abellan-Vf6Voxf-q80-unsplash.png">
-                    <div>
-                        <h5>John A</h5>
+                <li class="testimonial__item">
+                    <img class="testimonial__img" src="img/jan-abellan-Vf6Voxf-q80-unsplash.png">
+                    <div class="testimonial__text">
+                        <p>John A</p>
                         <p>“That war never happened. Thank you.”</p>
                     </div>
                 </li>
             </ul>
         </section>
         <section class="call-to-action">
-            <h3>Let's do this.</h3>
+            <h2 class="heading-secondary">Let's do this.</h2>
             <a class="btn" id="solve-a-problem" href=#>Solve a problem</a>
         </section>
     `
@@ -77,25 +79,24 @@ function loadLandingPage() {
 
 function loadLoginPage() {
         container.innerHTML = `
-            <article class="signin-page">
-				<div class="auth-container">
-					<div class="left">
-						<div class="blue-rectangle"></div>
-						<img id="auth-img" src="img/auth-design.png">
+            <article class="session-page">
+				<div class="auth__container">
+					<div class="auth__left">
+						<img class="auth__img" src="img/auth-design.png">
 					</div>
-					<div class="right">
-						<h2>Welcome back</h2>
-						<h3>Sign in</h3>
-						<form id="login-form">
-							<label>Email</label><br>
-							<input type="text" name="email" id="login-email" value="Google@gmail.com"></input><br>
-							<label>Password</label><br>
-							<input type="password" name="password" id="login-password" value="GoogleLove"></input><br>
+					<div class="auth__right">
+						<p>Welcome back</p>
+						<p>Sign in</p>
+						<form id="login__form">
+							<label>Email</label>
+							<input type="text" name="email" id="login-email" value="Google@gmail.com"></input>
+							<label>Password</label>
+							<input type="password" name="password" id="login-password" value="GoogleLove"></input>
 							<div class="checkbox-container inactive">
 								<div class="checkbox"></div>
 								<p>Keep me logged in</p>
 							</div>
-							<input id="signin-page-button" type="submit" value="Sign in"></input>
+							<input id="session-page-button" type="submit" value="Sign in"></input>
 						</form>
 					</div>
 				</div>
@@ -112,7 +113,7 @@ function loadLoginPage() {
         const nav = document.getElementById("desktop-nav")
         nav.classList.add("auth-page-nav")
     
-        const loginForm = document.getElementById("login-form")
+        const loginForm = document.getElementById("login__form")
     
         loginForm.addEventListener("submit", (event) => {
             event.preventDefault()
@@ -168,29 +169,28 @@ function loadLoginPage() {
 
 function loadSignupPage() {
         container.innerHTML = `
-            <article class="signup-page">
-                <div class="auth-container">
-                    <div class="left">
-                        <div class="blue-rectangle"></div>
-                        <img id="auth-img" src="img/auth-design.png">
+            <article class="session-page">
+                <div class="auth__container">
+                    <div class="auth__left">
+                        <img class="auth__img" src="img/auth-design.png">
                     </div>
-                    <div class="right">
-                        <h2>Welcome to Problem Solver</h2>
-                        <h3>Create an account to get started</h3>
-                        <form id="signup-form">
-                            <label>Username</label><br>
-                            <input type="text" name="username" id="signup-username"></input><br>
-                            <label>Email</label><br>
-                            <input type="text" name="email" id="signup-email"></input><br>
-                            <label>Password</label><br>
-                            <input type="text" name="password" id="signup-password"></input><br>
-                            <label>Confirm Password</label><br>
-                            <input type="text" name="password-confirmation" id="signup-password-confirmation"></input><br>
+                    <div class="auth__right">
+                        <p>Welcome to Problem Solver</p>
+                        <p>Create an account to get started</p>
+                        <form id="signup__form">
+                            <label>Username</label>
+                            <input type="text" name="username" id="signup-username"></input>
+                            <label>Email</label>
+                            <input type="text" name="email" id="signup-email"></input>
+                            <label>Password</label>
+                            <input type="text" name="password" id="signup-password"></input>
+                            <label>Confirm Password</label>
+                            <input type="text" name="password-confirmation" id="signup-password-confirmation"></input>
                             <div class="checkbox-container inactive">
                                 <div class="checkbox"></div>
                                 <p>Keep me logged in</p>
                             </div>
-                            <input id="signup-page-button" type="submit" value="Sign up"></input>
+                            <input id="session-page-button" type="submit" value="Sign up"></input>
                         </form>
                     </div>
                 </div>
@@ -207,7 +207,7 @@ function loadSignupPage() {
         const nav = document.getElementById("desktop-nav")
         nav.classList.add("auth-page-nav")
     
-        const signupForm = document.getElementById("signup-form")
+        const signupForm = document.getElementById("signup__form")
     
         signupForm.addEventListener("submit", (event) => {
             event.preventDefault()
