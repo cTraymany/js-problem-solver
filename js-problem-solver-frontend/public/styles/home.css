@@ -4,6 +4,15 @@
 
 #formContainer, #problemsContainer, #solutionForm, #solutionsUl {
     font-size: 1.6rem;
+    /* margin-left: 5rem; */
+}
+
+#problemsContainer, #solutionsUl {
+    max-width: 25rem;
+}
+
+#problemsContainer p {
+    cursor: pointer;
 }
 
 #formContainer, #solutionForm {
